@@ -6,6 +6,10 @@ import { useContext, useState } from "react"
 import { MKContext } from "../utils/context"
 import { FighterType } from "../utils/types"
 import ReactPlayer from "react-player"
+import { FireFrame } from "../components/fireFrame"
+import mk1Logo from '../assets/images/sigil.webp'
+import logo from '../assets/images/mk1-logo-tm.webp'
+
 
 export const Roster = () => {
     const {goHome, handlePurchase} = useContext(MKContext)
@@ -14,11 +18,11 @@ export const Roster = () => {
 
     const handleMouseOver = (fighter: FighterType) => {
         setActiveFighter(fighter.name)
-    };
+    }
 
     const handleMouseOut = () => {
         setActiveFighter(null)
-    };
+    }
     
     return (
         <div className="roster-container">
@@ -39,7 +43,7 @@ export const Roster = () => {
                             key={`${fighter.name}${fighter.purpose}`}
                             className={`fighter-container ${activeFighter === fighter.name ? 'active' : ''} 
                                     ${activeFighter !== fighter.name && activeFighter ? 'passive' : ''}`}
-                            style={{ animationDelay: `${index * 0.1}s`, scale: 0, opacity: 0 }}
+                            style={{ animationDelay: `${index * 0.1}s`, scale: 0 }}
                                     onMouseOver={() => handleMouseOver(fighter)}
                             onMouseOut={handleMouseOut}
                         >
@@ -57,6 +61,19 @@ export const Roster = () => {
                     ))
                 }
             </div>
-        </div>
+                <FireFrame>
+                    <div className="buy-now-bottom">       
+                        <div className="mk1Logo-img-container">
+                            <img src={mk1Logo} alt="mk 1 Logo" />
+                        </div>
+                        <div className="logo-container">
+                            <img src={logo} alt="logo" />
+                        </div>
+                        <button onClick={handlePurchase} className="buy-now-button-bottom">
+                            <span>BUY NOW</span>
+                        </button>
+                    </div>
+                </FireFrame>
+            </div>
     )
 }

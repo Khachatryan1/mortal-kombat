@@ -31,3 +31,13 @@ export type FighterType = {
     secondDescription?: string
     thirdDescription?: string
 }
+
+export type VideoType = {
+    title: string
+    videoUrl: string
+    imageUrl: string
+}
+
+export type VideoRenderProps = {
+    list: VideoType[]
+}

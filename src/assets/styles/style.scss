@@ -1164,6 +1164,7 @@ a {
         height: 996px;
         background-image: url('../images/purchase-edition-bg\ \(1\).jpg');
         background-size: 100%;
+        margin-bottom: 500px;
         
         h2 {
             position: absolute;
@@ -1183,7 +1184,6 @@ a {
             justify-content: center;
             position: absolute;
             top: 180px;
-            
 
             .fighter-container {
                 width: 169px;
@@ -1199,32 +1199,25 @@ a {
                 align-items: center;
                 overflow: hidden;
                 transition: transform 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
-                
                 animation: scaleIn 0.4s ease forwards;
 
                 @keyframes scaleIn {
                     0% {  
                         scale: 0.1;
-                        opacity: 0.1;
                     }
                     25% {
                         scale: 0.3;
-                        opacity: 0.3;
                     }
                     50% {
                         scale: 0.5;
-                        opacity: 0.5;
                     }
                     75% {
                         scale: 0.7;
-                        opacity: 0.7;
                     }
                     100% {
                         scale: 1;
-                        opacity: 1;
                     }
                 }
-                
                
                 img {
                     display: block;
@@ -1285,16 +1278,11 @@ a {
                     .fighter-name {
                         background-color: #2652a5;
                     }
-
-                    
-                   
                 }
 
-                
-            
                 &.passive {
                     transform: scale(0.9) skew(-15deg);
-                    opacity: 0.7 !important;
+                    opacity: 0.7;    
                 }
             }
         }
@@ -1369,8 +1357,127 @@ a {
                 }
             }
         }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.5) 100%);
+            pointer-events: none;
+        }
+
+        .fire-block-container {
+            top: 900px;
+
+            .buy-now-bottom {
+                @include buy-now-bottom();
+                position: relative;
+            }
+        }
     }
 
+
+    .media-container {
+        position: relative;
+        height: 2466px;
+        background-image: url('../images//purchase-page-bg-1600.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin-bottom: 500px;
+
+        .media-nav-container {
+            width: 100%;
+            display: flex;
+            position: absolute;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, .25);
+
+            .media-nav-logo-container {
+                width: 230px;
+                height: 65px;
+                z-index: 1;
+                margin-left: 20px;
+                margin-top: 5px;
+                
+                img {
+                    width: 100%;
+                    height: 100%;                   
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .media-main-nav {
+                @include main-nav();
+                // background-color: rgba(255, 255, 255, .25);
+                position: static;
+                margin-left: -250px;
+
+                ul {
+                    li {
+                        box-shadow: 0 2px 6px #00000012;
+                        background-color: rgba(255, 255, 255, .3);
+
+                        a {
+                            color: rgba(34, 62, 107, .8);
+                        }
+
+                        &:hover {
+                            background-color: rgba(255, 255, 255, .3);
+                        }
+                    }
+                }
+            }
+
+            .media-nav-buy-button {
+                @include button-style();
+                padding: 9px 18px;
+                min-width: 147px;
+                width: 147px;
+                height: 37px;
+                margin-right: 10px;
+
+                &:hover {
+                    clip-path: polygon(0% 50%, calc(11% - 2px) 0%, calc(89% + 2px) 0%, 100% 50%, calc(89% + 2px) 100%, calc(11% - 2px) 100%);
+                    span {
+                        transform: scale(1.1);
+                        text-shadow: 0 0 2px #96b9fc, 0 0 4px #96b9fc;
+                    }
+                }
+
+                span {
+                    font-size: 11px;
+                    word-spacing: 1px;
+                    letter-spacing: 1px;
+                    text-shadow: 0 0 4px #96b9fc;
+                }
+            }
+        }
+        .fire-block-container {
+            top: 2370px;
+
+            .buy-now-bottom {
+                @include buy-now-bottom();
+                position: relative;
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.5) 100%);
+            pointer-events: none;
+        }
+    }
 
     .footer-top-edge {
         background-color: #0e1a2d;
@@ -1497,7 +1604,7 @@ a {
                         cursor: pointer;
                         color: #b2c1d8;
                     }
-                }   
+                }
             }
 
             .lang-bottom {

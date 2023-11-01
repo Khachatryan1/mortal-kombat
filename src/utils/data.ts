@@ -1,4 +1,4 @@
-import { FighterType } from "./types"
+import { FighterType, VideoType } from "./types"
 import liuKang from '../assets/images/fighters/liuKang.webp'
 import subZero from '../assets/images/fighters/sub-zero.webp'
 import scorpion from '../assets/images/fighters/scorpion.webp'
@@ -241,5 +241,100 @@ export const FIGHTERS: FighterType[] = [
         firstDescription: "Reiko was a boy when he and his family were captured during the Kafallah War. Though his family died, Reiko fought and survived.",
         secondDescription: "After spending months as a prisoner, Reiko was freed during a raid by General Shao. Despite his youth and small size, Reiko attacked his former captors and exacted bloody revenge.",
         thirdDescription: "Impressed by the boy’s spirit, General Shao made Reiko his squire. Under his tutelage, Reiko learned the ways of war. He became an exceptional soldier and is now the General’s second-in-command."
+    }
+]
+
+export const MEDIA_VIDEOS: VideoType[] = [
+    {
+        title: 'The Reviews Are In!',
+        videoUrl: 'https://www.youtube.com/watch?v=1f8XCjsMS_E',
+        imageUrl: 'https://cdn-mk1.mortalkombat.com/media/accolades-trailer.jpg'
+    },
+    {
+        title: 'Launch Trailer',
+        videoUrl: 'https://www.youtube.com/watch?v=MYa7L4jp11E',
+        imageUrl: 'https://cdn-mk1.mortalkombat.com/media/launch-trailer.jpg'
+    },
+    {
+        title: 'It’s In Our Blood Trailer ft. Dave Bautista',
+        videoUrl: 'https://www.youtube.com/watch?v=BBH_KrEFetA',
+        imageUrl: 'https://cdn-mk1.mortalkombat.com/media/bautista-trailer.jpg'
+    },
+    {
+        title: 'Kombat Pack Roster Reveal Trailer',
+        videoUrl: 'https://www.youtube.com/watch?v=eT-3vhCl6N4',
+        imageUrl: 'https://cdn-mk1.mortalkombat.com/media/kombat-pack.jpg'
+    },
+    {
+        title: 'Gameplay Trailer',
+        videoUrl: 'https://www.youtube.com/watch?v=jnVTPkCWzcI',
+        imageUrl: 'https://cdn-mk1.mortalkombat.com/media/gameplay-trailer.jpg'
+    },
+    {
+        title: 'Announcement Trailer',
+        videoUrl: 'https://www.youtube.com/watch?v=UZ6eFEjFfJ0',
+        imageUrl: 'https://cdn-mk1.mortalkombat.com/media/announce-trailer.jpg'
+    }
+]
+
+export const FIGHTERS_VIDEOS: VideoType[] = [
+    {
+        title: 'Omni-Man First Look',
+        videoUrl: 'https://www.youtube.com/watch?v=ySWxnUqajQ0',
+        imageUrl: 'https://cdn-mk1.mortalkombat.com/media/omni-man-trailer.jpg'
+    },
+    {
+        title: 'Jean-Claude Van Damme Trailer',
+        videoUrl: 'https://www.youtube.com/watch?v=fO8wPLwRCao',
+        imageUrl: 'https://cdn-mk1.mortalkombat.com/media/johnny-cage-trailer.jpg'
+    },
+    {
+        title: 'Megan Fox Becomes Nitara Trailer',
+        videoUrl: 'https://www.youtube.com/watch?v=ah8VyRhiWiE',
+        imageUrl: 'https://cdn-mk1.mortalkombat.com/media/nitara-trailer.jpg'
+    },
+    {
+        title: 'Rulers of Outworld Trailer',
+        videoUrl: 'https://www.youtube.com/watch?v=nr4lA4N9lFU',
+        imageUrl: 'https://cdn-mk1.mortalkombat.com/media/rulers-trailer.jpg'
+    },
+    {
+        title: 'Banished Trailer',
+        videoUrl: 'https://www.youtube.com/watch?v=M39CVZt6uu0',
+        imageUrl: 'https://cdn-mk1.mortalkombat.com/media/banished-trailer.jpg'
+    },
+    {
+        title: 'Keepers of Time Trailer',
+        videoUrl: 'https://www.youtube.com/watch?v=72okJYRJWDI',
+        imageUrl: 'https://cdn-mk1.mortalkombat.com/media/keepers-trailer.jpg'
+    },
+    {
+        title: 'Umgadi Trailer',
+        videoUrl: 'https://www.youtube.com/watch?v=_sLJ-xyjMQo',
+        imageUrl: 'https://cdn-mk1.mortalkombat.com/media/umgadi.jpg'
+    },
+    {
+        title: 'Lin Kuei Trailer',
+        videoUrl: 'https://www.youtube.com/watch?v=66opZ1Go_ZA',
+        imageUrl: 'https://cdn-mk1.mortalkombat.com/media/lin-kuei.jpg'
+    }
+]
+
+
+export const EXTRAS_VIDEOS: VideoType[] = [
+    {
+        title: 'Pro Kompetition 23/24 Announcement',
+        videoUrl: 'https://www.youtube.com/watch?v=uITo9ghYGhU',
+        imageUrl: 'https://cdn-mk1.mortalkombat.com/media/pro-kompetition-trailer.jpg'
+    },
+    {
+        title: 'Dave Bautista Plays Mortal Kombat 1',
+        videoUrl: 'https://www.youtube.com/watch?v=1RHrXmLBp1k',
+        imageUrl: 'https://cdn-mk1.mortalkombat.com/media/bautista-plays-trailer.jpg'
+    },
+    {
+        title: '“Fatal” by ZHU Official Track',
+        videoUrl: 'https://www.youtube.com/watch?v=x2oExuKa73g',
+        imageUrl: 'https://cdn-mk1.mortalkombat.com/media/fatal-trailer.jpg'
     }
 ]

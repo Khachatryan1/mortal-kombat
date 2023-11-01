@@ -36,7 +36,7 @@ export const GameInfo = () => {
         const timerId = setTimeout(changeImage, 5000)
     
         return () => clearTimeout(timerId)
-    })
+    }, [])
     
 
     

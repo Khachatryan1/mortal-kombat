@@ -22,6 +22,8 @@ export const Header = memo(() => {
         headerClassName = 'transparent-header'
     } else if (location.pathname === '/ROSTER') {
         headerClassName = 'blue-header'
+    }else if (location.pathname === '/MEDIA') {
+        headerClassName = 'blue-header'
     }
 
     const handleLanguageModal = () => {
