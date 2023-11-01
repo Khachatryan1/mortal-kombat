@@ -1,6 +1,6 @@
 import { createContext, useRef, useState } from "react"
 import { ContextType } from "./types"
-import { useHref, useNavigate } from "react-router"
+import { useNavigate } from "react-router"
 
 export const MKContext = createContext<ContextType>({
     showCookieModal: false,
