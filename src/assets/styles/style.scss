@@ -1,0 +1,1760 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Roboto:wght@400;700;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a {
+    color: aliceblue;
+}
+
+@mixin modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 900;
+}
+
+@mixin button-style {
+    font-family: 'Libre Baskerville', serif;
+    border: none;
+    outline: none;
+    padding: 15px 30px;
+    min-width: 200px;
+    background: radial-gradient(circle,rgb(50,98,180) 0%,rgb(17,53,139) 100%);
+    clip-path: polygon(0% 50%,11% 0%,89% 0%,100% 50%,89% 100%,11% 100%);                
+
+    &:hover {
+        cursor: pointer;
+        clip-path: polygon(0% 50%, calc(11% - 5px) 0%, calc(89% + 5px) 0%, 100% 50%, calc(89% + 5px) 100%, calc(11% - 5px) 100%);
+
+        span {
+            transform: scale(1.1);
+            text-shadow: 0 0 5px #96b9fc, 0 0 10px #96b9fc;
+        }
+    }
+
+    span {
+        display: block;
+        font-size: 20px;
+        font-weight: 500;
+        word-spacing: 2px;
+        letter-spacing: 2px;
+        color: white;
+        text-shadow: 0 0 8px #96b9fc;
+        transition: transform .2s ease; 
+    }   
+}
+
+@mixin video-style {
+    width: 318px;
+    height: 155px;
+    margin-top: 15px;
+    overflow: hidden;
+    border-radius: 14px;
+    -webkit-clip-path: polygon(17% 1%, 100% 1%, 89% 94%, 85% 100%, 0 99%, 14% 6%);
+    clip-path: polygon(17% 1%, 100% 1%, 89% 94%, 85% 100%, 0 99%, 14% 6%);   
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+    }
+} 
+
+@mixin main-nav {
+    height: 73px;
+    position: absolute;
+    top: 40px;
+    z-index: 1;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 20px;
+    margin-left: 13px;
+
+    ul {
+        display: flex;
+        gap: 8px;
+
+        li {
+            border: 1px solid transparent;
+            padding: 5px 28px 9px;
+            transform: skew(45deg);
+            background-color: rgba(151, 181, 225, .075);
+
+            .inside-nav-text {
+                transform: skew(-45deg);
+                display: inline-block;
+            }
+
+            &:hover {
+                background-color: #6c757d;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@mixin header {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    z-index: 10;
+    font-size: 9px;
+    padding: 10px 15px 10px 5px;
+    text-transform: uppercase;
+    margin-bottom: -100px;
+
+    .header-nav {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        margin-top: 3px;
+        font-weight: 700;
+
+        .header-nav-left {
+            display: flex;
+            gap: 23px;
+            cursor: pointer;
+            
+            .lang-logo {
+                font-size: 13px;
+                margin-bottom: -3px;
+                font-weight: normal;
+            }
+
+            .wb-link {
+                margin-top: -13px;
+                margin-right: -5px;
+                padding: 10px 12px 25px;
+                height: 100%;
+    
+                img {
+                    display: block;
+                    width: 16px;
+                    height: 18px;
+                }
+
+                &:hover {
+                    background-color: #007aff;
+                    cursor: pointer;
+                }
+            }
+            
+            a:hover {
+                text-shadow: 0 0 15px #fff, 0 0 30px #09f;
+            }
+        }
+
+        .MK30th {
+            a {
+                display: flex;
+                gap: 5px;
+
+                img {
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+
+            &:hover {
+                text-shadow: 0 0 15px #fff, 0 0 30px #09f;
+            }
+        }
+
+        .header-nav-right {
+            display: flex;
+            gap: 20px;
+
+            .header-nav-support-block {
+                display: flex;
+                gap: 20px;
+
+                .header-nav-support {
+                    display: flex;
+                    gap: 30px;
+                    margin-top: -4px;
+
+                    .link:hover {
+                        text-shadow: 0 0 15px #fff, 0 0 30px #09f;
+                    }
+                }
+
+                .link:hover {
+                    text-shadow: 0 0 15px #fff, 0 0 30px #09f;
+                }
+
+                .icon {
+                    font-size: 17px;
+                    margin-bottom: -4px;
+                    margin-right: 3px;
+                }
+            }
+
+            .header-nav-media {
+                display: flex;
+                font-size: 16px;
+                margin-top: -3px;
+
+                .link {
+                    color: #fff9;
+                    padding: 11px 8px;
+                }
+
+                .red:hover {
+                    color: red;
+                    background-color: #223E6B;
+                }
+
+                .red:active {
+                    background-color: transparent;
+                    outline: 1px solid red;
+                }
+
+                .blue:hover {
+                    color: #1da1f2;
+                    background-color: #223E6B;
+                }
+
+                .blue:active {
+                    background-color: transparent;
+                    outline: 1px solid #1da1f2;
+                }
+
+                .purple:hover {
+                    color: #9147ff;
+                    background-color: #223E6B;
+                }
+
+                .purple:active {
+                    background-color: transparent;
+                    outline: 1px solid #9147ff;
+                }
+            }
+        }
+
+        .sign-in {
+            margin-right: 15px;
+            margin-left: 15px;
+        
+            &:hover {
+                text-shadow: 0 0 15px #fff, 0 0 30px #09f;
+            }
+        }
+    }       
+}
+
+@mixin buy-now-bottom {
+    height: 320px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .mk1Logo-img-container {
+        width: 322px;
+        height: 337px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    .logo-container {
+        width: 276px;
+        height: 79px;
+        position: absolute;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .buy-now-button-bottom {
+        @include button-style();
+        z-index: 35;
+        margin-bottom: 20px;
+    }
+}
+
+.fire-block-container {
+    background-image: url('https://cdn-mk1.mortalkombat.com/static/paper-angled-v1.jpg');
+    mask-image: url('https://cdn-mk1.mortalkombat.com/static/paper-angled-mask-v1.webp');
+    -webkit-mask-image: url('https://cdn-mk1.mortalkombat.com/static/paper-angled-mask-v1.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -3px; 
+    mask-position: center -20px;
+    -webkit-mask-position: center -20px;
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    position: relative;
+    z-index: 20;
+    overflow: hidden;
+
+    .fire-line-top {  
+        position: relative;  
+        transform: rotate(-2deg) scale3d(1.01,1,1);
+        mix-blend-mode: screen;  
+        z-index: 30;
+        filter: brightness(2);
+    }
+
+    .fire-line-top::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-image: url('https://cdn-mk1.mortalkombat.com/static/fire-line-v1.webp');
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 31;
+        top: 22px;
+        filter: brightness(2);
+
+    }
+    
+    .fire-line-bottom {  
+        position: relative; 
+        mix-blend-mode: screen; 
+        z-index: 30;
+        filter: brightness(5);
+
+    }
+
+    .fire-line-bottom::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-image: url('https://cdn-mk1.mortalkombat.com/static/fire-line-v2.webp');
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 31;
+        bottom: -29px;
+        filter: brightness(5);
+    }
+}
+
+.video-modal-overlay {
+    @include modal-overlay();
+
+    .video-modal-container {
+        height: 100vh;
+        width: 80%;
+        background-color: green;
+        margin: 0 auto;
+
+        .video-modal-icons {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            color: rgb(206, 202, 202);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            
+            .video-scale {
+                font-size: 20px;
+
+                &:hover {
+                    cursor: pointer;
+                    color: white;
+                }
+            }
+
+
+            .video-close {
+                font-size: 35px;
+
+                &:hover {
+                    cursor: pointer;
+                    color: white;
+                }
+            }
+
+            
+        }
+    }
+}
+
+
+.app {
+    min-height: 100vh;
+    max-width: 1520px;
+    font-family: 'Libre Baskerville', serif; 
+    position: relative;   
+    overflow: hidden;
+
+    .transparent-header {
+        @include header();
+    }
+
+    .blue-header {
+        @include header();
+        position: static;
+        margin-bottom: 0;
+        background: linear-gradient(270deg,#1b3d68 0%,rgb(14,26,45) 100%);
+        border-bottom: 1px solid #1d466d;
+        overflow: hidden;
+
+        .shop-merch {
+            border-right: 1px solid rgba(61,147,255,.18);
+            border-left: 1px solid rgba(61,147,255,.18);
+            padding: 13px 10px 0 10px;
+            margin-top: -13px;
+            margin-bottom: 13px;
+            
+            &:active {
+                a {
+                    color: black;
+                }
+                
+                background-color: #fff;
+            } 
+        }
+
+        .header-nav-support-block {
+            border-right: 1px solid rgba(61,147,255,.18);
+            border-left: 1px solid rgba(61,147,255,.18);
+            padding: 13px 10px 0 10px;
+            margin: 0 -15px 13px 0;
+            
+
+            .header-nav-support {
+                row-gap: 10px;
+
+                .support {
+                    border-right: 1px solid rgba(61,147,255,.18);
+                    border-left: 1px solid rgba(61,147,255,.18);
+                    padding: 13px 10px 0 10px;
+                    margin: -13px -10px 0 -15px;
+                }
+            }
+        }
+
+        .header-nav-right {
+            margin-top: -13px;
+        }
+
+        .sign-in {
+            margin-top: 13px;
+        }
+
+        .header-nav-media {
+            border-right: 1px solid rgba(61,147,255,.18);
+            padding: 13px 10px 10px 10px;
+        }
+
+    }
+
+    .main-container {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        .bg-video {
+            position: relative;
+            margin-bottom: -118px;
+        }
+
+        .home-main-nav {
+            @include main-nav();
+        }
+        
+        .main-buy-container {
+            position: absolute;
+            top: 250px;
+            left: 50%;
+            transform: translateX(-50%);           
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;           
+
+            .logo-img-container {
+                width: 614px;
+                height: 177px;
+                animation: shrinkLogoContainer 3s forwards;
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            @keyframes shrinkLogoContainer {
+                0% {
+                    transform: scale(2.5);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+
+            .buy-now-button {
+                @include button-style();
+                opacity: 0;
+                animation: growButton 2s forwards;
+                animation-delay: 2s;
+            }
+            
+            @keyframes growButton {
+                0% {
+                    transform: scale(0.1);
+                    opacity: 0;
+                }
+                100% {
+                    transform: scale(1);
+                    opacity: 1;                   
+                }
+            }
+        }  
+        
+        .fire-block-content {
+            height: 320px;
+            display: flex;
+            justify-content: center;
+            align-items: last baseline;
+            gap: 15px;
+          
+            .fire-block-content-left {
+                width: 614px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                .fire-block-left-img-container {
+                    width: 199px;
+                    height: 209px;
+                    margin-top: 80px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .fire-block-left-content {
+                    width: 600px;
+                    color: #223e6b;
+                    font-size: 14px;
+                    line-height: 28px;
+                    text-shadow: 1px 1px 3px #83bff2;
+
+                    h2 {
+                        font-weight: 700;
+                        font-size: 40px;
+                        margin-bottom: 25px;
+                    }
+
+                    strong {
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .fire-block-content-right {
+                width: 430px;
+                
+                display: block;
+
+                img {
+                    width: 100%;
+                    margin-bottom: -150px;
+                }
+            }   
+        }
+
+        
+
+        .home-kombat-pack {
+            position: relative;
+            top: -150px;
+            padding: 155px;
+            padding-top: 120px;
+            min-height: 633px;
+            background-image: url('../images/kombat-pack-bg-1600.jpg');
+            background-attachment: fixed;
+            background-position: right top;
+            background-size: cover;
+            margin-bottom: -248px;
+            
+            .kombat-pack-content {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                color: white;
+                text-align-last: left;
+                
+
+                .titles {
+                    font-weight: 700;
+
+                    h3 {
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                    }
+
+                    h2 {
+                        font-size: 48px;
+                    }
+                }
+
+                .desc {
+                    font-family: roboto;
+
+                    p {
+                        text-shadow: 0 4px 4px rgba(0,0,0,.25);
+                    }
+                    
+                    h4 {
+                        margin-top: 10px;
+                        text-shadow: 0 4px 4px rgba(0,0,0,.25);
+                        color: wheat;
+                    }
+                }
+            }
+
+            .kombat-pack-video-container {
+                @include video-style();
+            }
+
+            .play-icon {
+                width: 318px;
+                position: absolute;
+                bottom: 180px;
+                left: 160px;
+                font-size: 105px;
+                color: white;
+                z-index: 3;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                    transition: transform 0.2s ease;
+                }
+            }   
+        }
+
+        .buy-now-bottom {
+            @include buy-now-bottom();
+        }
+
+        
+    }
+
+    .buy-now-container {
+        background-image: url('../images//purchase-page-bg-1600.jpg');
+        background-size: cover;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(0deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.35) 100%);
+        }
+
+        .nav-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            background-color: rgba(255, 255, 255, 0.409);
+            border-bottom: 1px solid rgba(209, 209, 209, 0.945);
+
+            .nav-logo-container {
+                width: 230px;
+                height: 65px;
+                z-index: 1;
+                
+                img {
+                    width: 100%;
+                    height: 100%;                   
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .buy-now-main-nav {
+                @include main-nav();
+                position: sticky;
+               
+                ul {
+
+                   li {
+                        background-color: rgba(255, 255, 255, .3);
+
+                        a {
+                            color: rgba(34, 62, 107, .8);
+                        }
+                        
+                        &:hover {
+                            background-color: rgba(255, 255, 255, .75);
+                            transition: all 0.2s ease;
+                        }
+                    } 
+                }
+                
+            }
+        }
+        
+        .buy-now-main-container {
+            height: 1330px;
+            width: 983px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+
+            .wizard-nav {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                gap: 70px;
+                margin: 35px 0;
+                font-family: roboto;
+                font-weight: bold;
+                font-size: 17px;
+                color: #93733f;
+
+                span {
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 3px;
+                    border-radius: 50%;
+                    border: 1px solid;
+                    text-align: center;
+                    line-height: 30px;
+                    color: white;
+                    font-size: 18px;
+                    font-family: 'Libre Baskerville', serif;
+                    background-color: #93733f;    
+                }
+            }
+
+            .choice {
+                color: #223e6b;
+                font-family: roboto;
+                font-size: 18px;
+                word-spacing: 3px;
+                letter-spacing: 2px;     
+            }
+
+            .editions {
+                display: flex;
+                gap: 35px;
+
+                .edition {
+                    width: 296px;
+                    background-image: url('../images//purchase-edition-bg.jpg');
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 15px;
+
+                    .editions-image-container {
+                        width: 100%;
+                        height: 327px;
+                        
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .edition-button {
+                        @include button-style;
+                        font-size: 14px;
+                        padding: 8px 16px;
+                        min-width: 127px;
+                        width: 127px;
+                        height: 39px;
+                    
+                        &:hover {
+                            clip-path: polygon(0% 50%, calc(11% - 2px) 0%, calc(89% + 2px) 0%, 100% 50%, calc(89% + 2px) 100%, calc(11% - 2px) 100%);
+                            span {
+                                transform: scale(1.1);
+                                text-shadow: 0 0 2px #96b9fc, 0 0 4px #96b9fc;
+                            }
+                        }
+                    
+                        span {
+                            font-size: 14px;
+                            word-spacing: 1px;
+                            letter-spacing: 1px;
+                            text-shadow: 0 0 4px #96b9fc;
+                        }
+                    }
+
+                    .edition-data {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        align-items: center;
+                        padding: 10px;
+                        padding-bottom: 40px;
+                        
+                        .edition-title {
+                            color: #223e6b;
+                            font-size: 18px;
+                        }
+    
+                        .includes {
+                            color: #223e6b;
+                            font-size: 14px;
+                        }
+    
+                        ul {
+                            margin-left: 20px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+    
+                            li {
+                                list-style-type: disc;
+                                font-size: 12px;
+                                color: #223e6b;
+                                background: linear-gradient(0deg,rgba(183,165,114,.11) 0%,rgba(183,165,114,0) 100%);
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                .kollectors {
+                    background: white;
+                }
+            }
+        }
+    }
+
+    .game-info-container {
+        position: relative;
+
+        .game-info-header {
+            height: 860px;
+            background-image: url('../images//game-info-bg-.jpg');
+            background-position: center 64%;
+            background-size: cover;
+            margin-bottom: -100px;
+
+            .game-info-nav-container {
+                width: 100%;
+                display: flex;
+                position: absolute;
+                top: 50px;
+                justify-content: space-between;
+                align-items: center;
+
+                .game-info-nav-logo-container {
+                    width: 230px;
+                    height: 65px;
+                    z-index: 1;
+                    margin-left: 20px;
+                    margin-top: 5px;
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;                   
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                .game-info-main-nav {
+                    @include main-nav();
+                    position: static;
+                    margin-left: -250px;
+
+                    li:first-child {
+                        background-color: rgba(151, 181, 225, .3);
+                    }   
+                }
+
+                .game-info-buy-button {
+                    @include button-style();
+                    font-size: 15px;
+                    padding: 9px 18px;
+                    min-width: 147px;
+                    width: 147px;
+                    height: 37px;
+                    margin-right: 10px;
+
+                    &:hover {
+                        clip-path: polygon(0% 50%, calc(11% - 2px) 0%, calc(89% + 2px) 0%, 100% 50%, calc(89% + 2px) 100%, calc(11% - 2px) 100%);
+                        span {
+                            transform: scale(1.1);
+                            text-shadow: 0 0 2px #96b9fc, 0 0 4px #96b9fc;
+                        }
+                    }
+
+                    span {
+                        font-size: 15px;
+                        word-spacing: 1px;
+                        letter-spacing: 1px;
+                        text-shadow: 0 0 4px #96b9fc;
+                    }
+                }
+            }
+
+            .game-info-content {
+                width: 1106px;
+                position: absolute;
+                top: 480px;
+                display: flex;
+                align-items: center;
+                margin-left: calc(50% - 553px);
+
+                .game-info-text-content {
+                    color: white;
+                    font-family: roboto;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    margin-top: 45px;
+
+                    p {
+                        font-weight: 700;
+                        font-size: 16px;
+
+                        span {
+                            font-weight: 700;
+                            font-size: 14px;
+                            margin-left: 87px;
+                        }
+                    }
+
+                    h2 {
+                        font-weight: 700;
+                        font-size: 30px;
+
+                        span {
+                            font-weight: 700;
+                            font-size: 15px;
+                            margin-left: 40px;
+                            color: #ffecc5;
+                        }
+                    }
+                }
+
+                .game-info-video-container {
+                    @include video-style();
+                    margin-left: 15px;
+                }
+
+                .play-icon {
+                    width: 318px;
+                    position: absolute;
+                    bottom: 30px;
+                    right: 15px;
+                    font-size: 105px;
+                    color: white;
+                    z-index: 3;
+    
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.1);
+                        transition: transform 0.2s ease;
+                    }
+                }
+            }
+        }
+
+        .game-info-fire-block-container {
+            height: 595px;
+            background-image: url('../images//paper-alternative-fill.jpg');
+            background-size: cover;
+            clip-path: polygon(0% 13%,2% 11%,4% 10%,10% 10%,10% 11%,23% 12%,25% 11%,29% 7%,35% 7%,36% 8%,42% 9%,50% 8%,53% 8%,62% 7%,64% 7%,69% 5%,72% 5%,80% 7%,86% 7%,89% 6.5%,91% 5%,93% 4%,100% 4%,100% 88%,98% 87.2%,84% 91%,79% 97%,75% 97%,70% 95%,64% 94%,59% 91.4%,57% 92%,52% 95%,51% 95%,43.6% 94.5%,42% 96%,38% 95%,30% 95%,24.7% 93%,20% 94%,17.4% 95%,13.5% 93%,12% 93%,8.5% 94.7%,6% 95%,0% 90%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 5;
+
+            .game-info-fire-block-content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 1105px;
+                height: 310px;
+
+                .game-info-text-content {
+                    width: 420px;
+                    height: 218px;
+                    color: #223e6b;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+
+                    h2 {
+                        font-size: 38px;
+                        font-weight: 700;
+                    }
+
+                    p {
+                        font-size: 15px;
+                        line-height: 20px;
+                    }
+                }
+    
+                .game-info-slide-container {
+                    width: 550px;
+                    height: 300px;
+                    border-radius: 10px;
+                    transform: skew(-15deg);
+                    overflow: hidden;
+                    
+
+                    img {
+                        width: 110%;
+                        height: 100%;
+                        transform: skew(15deg);
+                        margin-left: -10px;
+                        scale: 1.1;
+                    }
+                }
+            }   
+        }
+
+        .story-block-container {
+            width: 100%;
+            height: 590px;
+            background-image: url('../images/story-env-b.jpg');
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            background-size: cover;
+            margin-top: -75px;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .story-block-content {
+                width: 550px;
+                height: 220px;
+                color: white;
+                text-align: center;
+
+                h2 {
+                    font-size: 40px;
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    font-size: 13px;
+                    line-height: 25px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .invasions-block-container {
+            width: 100%;
+            height: 770px;
+            background-image: url('../images/invasions-bg-2442.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: -280px;
+
+            .invasions-block-content {
+                width: 814px;
+                height: 190px;
+                color: white;
+                text-align: center;
+                margin-top: -100px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                h2 {
+                    font-size: 40px;
+                }
+
+                p {
+                    font-size: 13.5px;
+                    line-height: 25px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .buy-now-bottom {
+            @include buy-now-bottom();
+        }
+        
+
+        .game-info-fire-top {
+            position: absolute;
+            top: 738px;
+            transform: scale3d(-1.05,1.05,1);
+            mix-blend-mode: screen;
+            z-index: 20;
+
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-image: url('../images/fire-line-v2.webp');
+                transform: scale3d(0.95,1.05,3);
+                position: absolute;
+                background-size: contain;
+                background-repeat: no-repeat;
+                z-index: 31;
+                top: 23px;
+                filter: brightness(2);
+            }
+        }
+
+        .game-info-fire-bottom {
+            mix-blend-mode: screen;
+            position: absolute;
+            top: 1245px;
+            z-index: 10;
+
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-image: url('../images//fire-line-v1.webp');
+                position: absolute;
+                background-size: contain;
+                background-repeat: no-repeat;
+                z-index: 31;
+                top: 23px;
+                filter: brightness(5);
+            }
+        }       
+    }
+
+    .roster-container {
+        position: relative;
+        height: 996px;
+        background-image: url('../images/purchase-edition-bg\ \(1\).jpg');
+        background-size: 100%;
+        
+        h2 {
+            position: absolute;
+            top: 100px;
+            left: 567px;
+            color: #223E6B;
+            font-size: 25px;
+            font-weight: 700;
+            word-spacing: 5px;
+        }
+
+        .fighters-container {
+            height: 698px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            position: absolute;
+            top: 180px;
+            
+
+            .fighter-container {
+                width: 169px;
+                height: 226px;
+                border: 1px solid white;
+                border-radius: 5px;
+                transform: scale3d(.5,.5,1) skew(-15deg);
+                background: linear-gradient(180deg,#b0bfd7 0%,white 100%);
+                transform: scaleZ(1) skew(-15deg);
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                transition: transform 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
+                
+                animation: scaleIn 0.4s ease forwards;
+
+                @keyframes scaleIn {
+                    0% {  
+                    }
+                    50% {
+                        scale: 0.5;
+                        // opacity: 0.5;
+                    }
+                    100% {
+                        scale: 1;
+                        opacity: 1;
+                    }
+                }
+                
+               
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    transform: scale3d(.5,.5,1) skew(15deg);
+                    scale: 6.1;
+                    margin-top: 220px;
+                    margin-left: 30px;
+                    transition: transform 1s ease, scale 0.5s ease;
+                }
+            
+                .fighter-name {
+                    clip-path: polygon(76% 34%, 95% 59%, 75% 81%, 21% 81%, 0% 60%, 23% 34%);
+                    background-color: #373737;
+                    color: white;
+                    font-size: 12px;
+                    text-align: center;
+                    line-height: 44px;
+                    padding: 3px 30px;
+                    height: 44px;
+                    width: auto;
+                    position: absolute;
+                    z-index: 2;
+                    top: 182px;
+                    transform: skew(15deg);
+                    transition: background-color 0.5s ease;
+                    
+                    p {
+                        font-weight: 700;
+                    }
+                }
+
+                .roster-smoke {
+                    position: absolute;
+                    bottom: -14px;
+                    mix-blend-mode: screen;
+                }
+            
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 6px;
+                    width: 100%;
+                    background-color: white;
+                    bottom: -1px;
+                    transition: background-color 0.5s ease;
+                }
+            
+                &:hover {
+                    cursor: pointer;
+                }
+            
+                &.active {
+                    img {
+                        scale: 6.5;
+                    }
+                    .fighter-name {
+                        background-color: #2652a5;
+                    }
+
+                    
+                   
+                }
+
+                
+            
+                &.passive {
+                    transform: scale(0.9) skew(-15deg);
+                    opacity: 0.7 !important;
+                }
+            }
+        }
+
+        .roster-nav-container {
+            width: 100%;
+            display: flex;
+            position: absolute;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(255 255 255 / 25%);
+
+            .roster-nav-logo-container {
+                width: 230px;
+                height: 65px;
+                z-index: 1;
+                margin-left: 20px;
+                margin-top: 5px;
+                
+                img {
+                    width: 100%;
+                    height: 100%;                   
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .roster-main-nav {
+                @include main-nav();
+                position: static;
+                margin-left: -250px;
+
+                ul {
+                    li {
+                        box-shadow: 0 2px 6px #00000012;
+                        background-color: rgba(255, 255, 255, .3);
+
+                        a {
+                            color: rgba(34, 62, 107, .8);
+                        }
+
+                        &:hover {
+                            background-color: rgba(255, 255, 255, .3);
+                        }
+                    }
+                }
+            }
+
+            .roster-nav-buy-button {
+                @include button-style();
+                padding: 9px 18px;
+                min-width: 147px;
+                width: 147px;
+                height: 37px;
+                margin-right: 10px;
+
+                &:hover {
+                    clip-path: polygon(0% 50%, calc(11% - 2px) 0%, calc(89% + 2px) 0%, 100% 50%, calc(89% + 2px) 100%, calc(11% - 2px) 100%);
+                    span {
+                        transform: scale(1.1);
+                        text-shadow: 0 0 2px #96b9fc, 0 0 4px #96b9fc;
+                    }
+                }
+
+                span {
+                    font-size: 11px;
+                    word-spacing: 1px;
+                    letter-spacing: 1px;
+                    text-shadow: 0 0 4px #96b9fc;
+                }
+            }
+        }
+    }
+
+
+    .footer-top-edge {
+        background-color: #0e1a2d;
+        height: 100px;
+        margin-top: -100px;
+        border-bottom: 1px solid #1c2b45;
+    }
+
+    .footer-container {
+        height: 275px;
+        background-color: #0e1a2d;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        .garden-container {
+            width: 1121px;
+            height: 73px;
+            margin: 0 auto;
+
+            .logo-garden {
+                width: 984px;
+                height: 73px;
+                margin: 0 auto;      
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #0e1a2d;
+                gap: 50px;    
+                
+                li {
+                    list-style: none;
+                    width: auto;
+                    height: 100%;
+                    padding: 5px;
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .long-logo {
+                    padding: 25px 0;
+                } 
+            }
+
+            .legal-and-rating {
+                display: flex;
+                gap: 25px;
+                font-size: 7px;
+                color: #b2c1d8;
+                font-family: roboto;
+                padding-left: 20px;
+                letter-spacing: 1px;
+                font-weight: 100;
+                line-height: 14px;
+                margin-top: 35px;
+
+                .legal {
+                    max-width: 76%;
+
+                    .legal-bottom {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 13px;
+                        color: #8a9cb9;
+
+                        .wb-logo-container {
+                            width: 35px;
+                            height: 35px;
+                            margin-right: 10px;
+        
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+
+                
+
+                .rating {
+                    width: 300px;
+                    height: 120px;
+                    padding-right: 15px;
+                }
+            } 
+        }
+        
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            font-size: 10px;
+            margin-top: 15px;
+
+            .cookie-button {
+                width: 120px;
+                height: 33px;
+                border: 1px solid;
+                outline: none;
+                font-size: 10px;
+
+                &:hover {
+                    background-color: #68b631;
+                    cursor: pointer;
+                }
+            }
+
+            .links {
+                display: flex;
+                gap: 30px;
+                text-transform: uppercase;
+                font-family: roboto;
+                margin-bottom: 4px;
+
+                a {
+                    color: #8a9cb9;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: #b2c1d8;
+                    }
+                }   
+            }
+
+            .lang-bottom {
+                display: flex;
+                gap: 3px;
+                align-items: center;
+                color: white;
+                font-size: 10px;
+                font-family: roboto;
+                text-transform: uppercase;
+                font-weight: bold;
+                padding: 2px 10px;
+                border: 1px solid transparent;
+                
+                .globe {
+                    font-size: 15px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    color: #edc24f;
+                    transition: color .3s linear;
+                }
+
+                &:active {
+                    
+                    background-color: #fff;
+                    color: black;
+                    
+                }
+            }
+        }
+        
+         
+    }
+
+    .cookie-modal-overlay {
+        @include modal-overlay;
+
+        .cookie-modal-container {
+        max-width: 576px;
+        max-height: 300px;
+        position: absolute;
+        bottom: 380px;
+        left: calc(50% - 288px);
+        background-color: white;
+        border-radius: 5px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        .cookie-modal-header {
+            width: 576px;
+            max-height: 59px;
+            border-bottom: 1px solid #696969;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .cookie-modal-image-container {
+                width: 38px;
+                height: 40px;
+                margin: 10px 0 10px 70px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .cookie-modal-close {
+                font-size: 35px;
+                margin-right: 10px;
+                border-radius: 50%;
+                padding: 5px;
+                opacity: 0.8;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        .cookie-modal-main {
+            overflow-y: scroll;
+
+            p {
+                font-size: 14px;
+                font-family: roboto;
+                color: #696969;
+                line-height: 25px;
+                font-weight: 700;
+                margin: 60px 0 80px 30px;
+            }
+        }
+
+        .cookie-modal-footer {
+            width: 576px;
+            height: 73px;
+            border-top: 1px solid #696969;
+            text-align: right;
+
+            button {
+                width: 98px;
+                height: 37px;
+                background-color: #004EB4;
+                color: white;
+                outline: none;
+                border: 1px solid transparent;
+                border-radius: 5px;
+                font-size: 11px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                margin-right: 18px;
+                margin-top: 18px;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.8;
+                }
+
+                &:active {
+                    border-color: black;
+                }
+            }
+        }
+    }
+    }
+
+    .language-modal-overlay {
+        @include modal-overlay;
+
+        
+
+        .language-modal-container {
+            width: 520px;
+            height: 100vh;
+            overflow-y: auto;
+            position: absolute;
+            top: 0;
+            left: calc(50% - 235px);
+            z-index: 1000;
+            background-color: black;
+            color: white;
+            font-family: roboto;
+            margin-left: -24px;
+            padding: 20px 0 40px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            animation: shrinkModalContainer 0.5s forwards;
+            
+
+
+            @keyframes shrinkModalContainer {
+                0% {
+                    transform: scale(1.5);
+                    opacity: 0.5;
+                }
+                100% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+
+            
+
+
+            &:hover {
+                overflow-y: auto;
+            }
+
+            .language-modal-header {
+                display: flex;
+                justify-content: space-between;
+                font-size: 30px;
+
+                .modal-close-icon {
+                    color: white;
+                    font-size: 30px;
+                    margin: -15px 10px 0 0;
+                    height: 36px;
+                    width: 36px;
+                    border-radius: 50%;
+
+                    &:hover {
+                        padding: 5px;
+                        transition: padding 0.2s ease;
+                        cursor: pointer;
+                    }
+
+                    &:active {
+                        background-color: #fff;
+                        color: black;
+                    }
+                }
+            }
+
+            .language-modal-section {
+                h3 {
+                    color: #fff9;
+                    font-size: 11px;
+                    margin-bottom: 10px;
+                    margin-left: 3px;
+                }
+
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 3px;
+
+                    li {
+                        font-size: 18px;
+                        width: calc(50% - 5px);
+                        display: flex;
+                        
+
+                        p {
+                            padding: 5px;
+                        }
+
+                        &:hover {
+                            p {
+                                cursor: pointer;
+                                background-color: #edc24f;
+                                color: black;
+                                transition: background-color .2s ease;
+                            }
+                            
+                        }
+
+                        &:active {
+                            p {
+                                background-color: #2d3f5d;
+                                color: black;
+                            }
+                           
+                        }
+                    }
+                }
+            }
+        }
+        
+        .close {
+            animation: closeModalContainer 0.3s forwards;
+        }
+
+        @keyframes closeModalContainer {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            25%{
+                opacity: 0.7;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            75%{
+                opacity: 0.2;
+            }
+            100% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+        }
+    }    
+}
