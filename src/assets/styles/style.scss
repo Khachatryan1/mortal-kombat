@@ -1564,6 +1564,241 @@ a {
         }
     }
 
+    .sports-container {
+        position: relative;
+        background-image: url('../images/esports/esports-top-bg-2560.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        .media-nav-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(50,98,180, .08);
+
+            .media-nav-logo-container {
+                width: 230px;
+                height: 65px;
+                z-index: 1;
+                margin-left: 20px;
+                margin-top: 5px;
+                
+                img {
+                    width: 100%;
+                    height: 100%;                   
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .media-main-nav {
+                @include main-nav();
+                // background-color: rgba(255, 255, 255, .25);
+                position: static;
+                margin-left: -250px;
+
+                li:nth-child(5) {
+                    background-color: white;
+                    a {
+                        color: #223e6b;
+                    }
+                    
+                }
+
+                ul {
+                    li {
+                        box-shadow: 0 2px 6px #00000012;
+                        background-color: rgba(255, 255, 255, .1);
+
+                        a {
+                            color: white;
+                        }
+
+                        &:hover {
+                            background-color: rgba(255, 255, 255, .75);
+
+                            a {
+                                color: #223e6b;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .media-nav-buy-button {
+                @include button-style();
+                padding: 9px 18px;
+                min-width: 147px;
+                width: 147px;
+                height: 37px;
+                margin-right: 10px;
+
+                &:hover {
+                    clip-path: polygon(0% 50%, calc(11% - 2px) 0%, calc(89% + 2px) 0%, 100% 50%, calc(89% + 2px) 100%, calc(11% - 2px) 100%);
+                    span {
+                        transform: scale(1.1);
+                        text-shadow: 0 0 2px #96b9fc, 0 0 4px #96b9fc;
+                    }
+                }
+
+                span {
+                    font-size: 11px;
+                    word-spacing: 1px;
+                    letter-spacing: 1px;
+                    text-shadow: 0 0 4px #96b9fc;
+                }
+            }
+        }
+
+        .sports-main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .competition-img-container {
+                width: 460px;
+                height: 350px;
+                margin-top: 47px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .title-bar {
+                position: relative;
+                margin-top: 45px;
+
+                .title-bar-img-container {
+                    width: 800px;
+                    height: 64px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                h2 {
+                    position: absolute;
+                    top: 15px;
+                    left: 185px;
+                    // text-align: center;
+                    color: white;
+                }
+            }
+
+            .bracket-lines-img-container {
+                width: 632px;
+                height: 106px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .kombat-liga {
+                margin-top: 10px;
+                display: flex;
+                gap: 20px;
+
+                .liga {
+                    width: 290px;
+                    height: 420px;
+                    position: relative;
+                    color: white;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .liga-data {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        align-items: center;
+                        position: absolute;
+                        top: 25px;
+                        left: 15px;
+
+                        .liga-data-img-container {
+                            width: 258px;
+                            height: 208px;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                        .event-link {
+                            font-family: roboto;
+                            font-size: 13px;
+                            padding: 7px 12px;
+                            background-color: #3262b4;
+                            border-radius: 3px;
+
+                            &:hover {
+                                background-color: #0b5ed7;
+                            }
+                        }
+
+                        .liga-name {
+                            margin-top: 20px;
+                            font-family: roboto;
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+
+            .mk-trailer {
+                color: white;
+                margin-top: 60px;
+            }
+
+            .mk-trailer-link {
+                margin-top: 30px;
+                padding: 13px;
+                background-color: #3262b4;
+                font-family: roboto;
+                font-size: 18px;
+                border-radius: 3px;
+
+                &:hover {
+                    background-color: #0a58ca;
+                }
+            }
+
+            .info-link {
+                text-transform: uppercase;
+                margin-top: 80px;
+                margin-bottom: 100px;
+                width: 80%;
+                text-align: center;
+                font-family: roboto;
+                font-size: 17px;
+
+                &:hover {
+                    color: #007aff;
+                }
+            }
+        }
+
+        .fire-block-container {
+            .buy-now-bottom {
+                @include buy-now-bottom();
+                position: relative;
+            }
+        }
+    }
+
     .faq-container {
         background-image: url('../images//purchase-page-bg-1600.jpg');
         background-size: 100%;

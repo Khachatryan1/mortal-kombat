@@ -26,6 +26,8 @@ export const Header = memo(() => {
         headerClassName = 'blue-header'
     } else if (location.pathname === '/FAQ') {
         headerClassName = 'blue-header'
+    } else if (location.pathname === '/ESPORTS') {
+        headerClassName = 'blue-header'
     }
 
     const handleLanguageModal = () => {

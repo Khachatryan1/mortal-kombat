@@ -43,17 +43,17 @@ export const Media = () => {
 				</div>
 			</div>
 			<FireFrame>
-                    <div className="buy-now-bottom">       
-                        <div className="mk1Logo-img-container">
-                            <img src={mk1Logo} alt="mk 1 Logo" />
-                        </div>
-                        <div className="logo-container">
-                            <img src={logo} alt="logo" />
-                        </div>
-                        <button onClick={handlePurchase} className="buy-now-button-bottom">
-                            <span>BUY NOW</span>
-                        </button>
+                <div className="buy-now-bottom">       
+                    <div className="mk1Logo-img-container">
+                        <img src={mk1Logo} alt="mk 1 Logo" />
                     </div>
+                    <div className="logo-container">
+                        <img src={logo} alt="logo" />
+                    </div>
+                    <button onClick={handlePurchase} className="buy-now-button-bottom">
+                        <span>BUY NOW</span>
+                    </button>
+                </div>
             </FireFrame>
         </div>
     )
