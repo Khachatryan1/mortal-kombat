@@ -7,14 +7,18 @@ import mk1Logo from '../assets/images/sigil.webp'
 import logo from '../assets/images/mk1-logo-tm.webp'
 import { VideoRender } from "../components/videoRender"
 import { MEDIA_VIDEOS, FIGHTERS_VIDEOS, EXTRAS_VIDEOS } from "../utils/data"
+import { VideoModal } from "../components/modal windows/videoModal"
 
 
 export const Media = () => {
-    const {goHome, handlePurchase} = useContext(MKContext)
+    const {goHome, handlePurchase, showVideoModal, videoLink} = useContext(MKContext)
 
 
     return (
         <div className="media-container">
+            {
+                showVideoModal && <VideoModal url={videoLink}/>
+            }
             <div className="media-nav-container">
                 <div onClick={goHome} className="media-nav-logo-container">
                     <img src={mkLogo} alt="mk1 logo" />
@@ -24,16 +28,19 @@ export const Media = () => {
                     <span>BUY NOW</span>
                 </button>
             </div>
-			<div>
+			<div className="video-blocks">
+                <h2 className="video-block-title media">MEDIA</h2>
 				<div className="media-video-container">
 					<VideoRender list={MEDIA_VIDEOS}/>
 				</div>
-				{/* <div className="fighters-video-container">
+                <h2 className="video-block-title">FIGHTERS</h2>
+				<div className="media-video-container">
 					<VideoRender list={FIGHTERS_VIDEOS}/>
-				</div> */}
-				{/* <div className="extra-video-container">
+				</div>
+                <h2 className="video-block-title">EXTRAS</h2>
+				<div className="media-video-container">
 					<VideoRender list={EXTRAS_VIDEOS}/>
-				</div> */}
+				</div>
 			</div>
 			<FireFrame>
                     <div className="buy-now-bottom">       

@@ -355,8 +355,7 @@ a {
 
     .video-modal-container {
         height: 100vh;
-        width: 80%;
-        background-color: green;
+        background-color: rgb(120, 129, 120);
         margin: 0 auto;
 
         .video-modal-icons {
@@ -1379,19 +1378,15 @@ a {
         }
     }
 
-
     .media-container {
         position: relative;
-        height: 2466px;
         background-image: url('../images//purchase-page-bg-1600.jpg');
         background-size: 100%;
         background-repeat: no-repeat;
-        margin-bottom: 500px;
 
         .media-nav-container {
             width: 100%;
             display: flex;
-            position: absolute;
             justify-content: space-between;
             align-items: center;
             background-color: rgba(255, 255, 255, .25);
@@ -1459,18 +1454,108 @@ a {
                 }
             }
         }
-        .fire-block-container {
-            top: 2370px;
 
+        .video-blocks {
+            margin-bottom: 60px;
+
+            .video-block-title {
+                margin: 40px;
+                font-size: 30px;
+                color: #223e6b;
+                text-align: center;
+                font-family: roboto;
+    
+                &.media {
+                    margin-top: 80px;
+                    font-size: 38px;
+                }
+            }
+
+            .media-video-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 35px;
+                width: 90%;
+                margin: 0 auto;
+                        
+
+                .video-container {
+                    width: calc(33% - 20px);
+                    height: 280px;
+                    margin-bottom: 20px;
+                    position: relative;
+                    transform: skew(-15deg);
+
+                    .video-link-img-container {
+                        overflow: hidden;
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        border-radius: 5px;
+
+                        a {
+                            position: absolute;
+                            display: block;
+                            z-index: 1;
+                            aspect-ratio: 16/9;
+                            border-radius: 5px;
+                            overflow: hidden;
+
+                            img {
+                                width: 115%;
+                                height: 100%;
+                                transform: skew(15deg);
+                                margin-left: -31px;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+
+                    .play-icon {
+                        position: absolute;
+                        top: 20%;
+                        left: 38%;
+                        color: white;
+                        font-size: 108px;
+                        font-weight: 700;
+                        z-index: 10;
+                        transform: skew(15deg);
+                        transition: all 0.5s ease;
+                    }
+
+                    .video-title {
+                        color: #223e6b;
+                        text-align: center;
+                        font-size: 15px;
+                        font-weight: 700;
+                        margin-top: -28px;
+                        transform: skew(15deg);
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+
+                        .play-icon {
+                            scale: 1.1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .fire-block-container {
             .buy-now-bottom {
                 @include buy-now-bottom();
                 position: relative;
             }
         }
+
         &::before {
             content: "";
             position: absolute;
-            bottom: 0;
+            bottom: 486px;
             left: 0;
             width: 100%;
             height: 400px;

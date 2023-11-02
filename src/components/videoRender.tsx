@@ -1,37 +1,34 @@
 import { LiaPlaySolid } from "react-icons/lia"
-import { VideoRenderProps } from "../utils/types"
+import { VideoRenderProps, VideoType } from "../utils/types"
 import { useContext } from "react"
 import { MKContext } from "../utils/context"
-import { VideoModal } from "./modal windows/videoModal"
 
 export const VideoRender = ({list}: VideoRenderProps) => {
-    const {setShowVideoModal, showVideoModal} = useContext(MKContext)
+    const {setVideoLink, setShowVideoModal} = useContext(MKContext)
 
-    const handleVideoModal = () => {
+    const handleVideoModal = (video: VideoType) => {
         setShowVideoModal(true)
+        setVideoLink(video.videoUrl)
     }
 
 
     return (
-        <div>
+        <>
             {
                 list.map((video) => {
-                    console.log(video.videoUrl)
                     return (
-                        <div key={video.videoUrl}>
-                            <a href={video.videoUrl} target="_blank">
-                                <img src={video.imageUrl} alt={video.title} />
-                            </a>
-                            <LiaPlaySolid onClick={handleVideoModal} className="play-icon"/>
-                            <p>{video.title}</p>
-                            {
-                                showVideoModal && <VideoModal url={video.videoUrl}/>
-                            }
+                        <div className="video-container" key={video.videoUrl}>
+                            <div className="video-link-img-container">
+                                <a href={video.videoUrl} target="_blank">
+                                    <img src={video.imageUrl} alt={video.title} />
+                                </a>
+                            </div>
+                            <LiaPlaySolid onClick={() => handleVideoModal(video)} className="play-icon"/>
+                            <p onClick={() => handleVideoModal(video)} className="video-title">{video.title}</p>
                         </div>
-                        
                     )
                 })
             }
-        </div>
+        </>
     )
 }

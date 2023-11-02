@@ -13,7 +13,9 @@ export const MKContext = createContext<ContextType>({
     setShowVideoModal: () => {},
     goHome: () => {},
     handlePurchase: () => {},
-    headerRef: {current: null}
+    headerRef: {current: null},
+    videoLink: '',
+    setVideoLink: () => {}
 })
 
 
@@ -22,6 +24,7 @@ export const MKContextWrapper = ({ children }: { children: React.ReactNode }) =>
     const [showLanguageModal, setShowLanguageModal] = useState(false)
     const [showVideoModal, setShowVideoModal] = useState(false)
     const [language, setLanguage] = useState('United States - English')
+    const [videoLink, setVideoLink] = useState('')
     const headerRef = useRef<HTMLDivElement>(null)
 
     const navigate = useNavigate()
@@ -48,7 +51,9 @@ export const MKContextWrapper = ({ children }: { children: React.ReactNode }) =>
         setShowVideoModal,
         goHome,
         handlePurchase,
-        headerRef
+        headerRef,
+        videoLink,
+        setVideoLink
     }
 
     return (

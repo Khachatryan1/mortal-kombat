@@ -12,6 +12,8 @@ export type ContextType = {
     handlePurchase: () => void
     goHome: () => void
     headerRef: LegacyRef<HTMLDivElement>
+    videoLink: string
+    setVideoLink: React.Dispatch<React.SetStateAction<string>>
 }
 
 export type VideoModalProps = {

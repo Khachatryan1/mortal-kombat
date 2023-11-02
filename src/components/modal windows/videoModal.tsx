@@ -1,28 +1,30 @@
 import ReactPlayer from "react-player"
 import { IoClose } from "react-icons/io5"
-import {FaSearchPlus} from 'react-icons/fa'
+import {FaSearchPlus, FaSearchMinus} from 'react-icons/fa'
 import { MKContext } from "../../utils/context"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { VideoModalProps } from "../../utils/types"
 
 export const VideoModal = ({url}: VideoModalProps) => {
     const {setShowVideoModal} = useContext(MKContext)
+    const [scaleIn, setScaleIn] = useState(false)
 
     const closeVideoModal = () => {
         setShowVideoModal(false)
     }
 
-    const scaleVideo = () => {
-        const videoContainer = document.querySelector('.video-modal-container') as HTMLElement
-        videoContainer.style.width = '90%'     
+    const scaleInVideo = () => {
+        setScaleIn(!scaleIn)    
     }
 
 
     return (
         <div className="video-modal-overlay">
-            <div className="video-modal-container">
+            <div style={{width: `${scaleIn ? '90%' : '80%'}`}} className="video-modal-container">
                 <div className="video-modal-icons">
-                    <FaSearchPlus onClick={scaleVideo} className="video-scale"/>
+                    {
+                        scaleIn ? <FaSearchMinus onClick={scaleInVideo} className="video-scale"/> : <FaSearchPlus onClick={scaleInVideo} className="video-scale"/>
+                    }
                     <IoClose onClick={closeVideoModal} className="video-close"/>
                 </div>
                 <ReactPlayer 
