@@ -43,3 +43,10 @@ export type VideoType = {
 export type VideoRenderProps = {
     list: VideoType[]
 }
+
+export type QuestionType = {
+    question: string
+    firstAnswer: string
+    secondAnswer?: string
+    thirdAnswer?: string
+}

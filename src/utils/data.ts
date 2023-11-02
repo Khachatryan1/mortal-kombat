@@ -1,4 +1,4 @@
-import { FighterType, VideoType } from "./types"
+import { FighterType, QuestionType, VideoType } from "./types"
 import liuKang from '../assets/images/fighters/liuKang.webp'
 import subZero from '../assets/images/fighters/sub-zero.webp'
 import scorpion from '../assets/images/fighters/scorpion.webp'
@@ -24,10 +24,10 @@ import NITARA from '../assets/images/fighters/NITARA.webp'
 import SHANGTSUNG from '../assets/images/fighters/SHANGTSUNG.webp'
 
 
-export const AMERICA = ['United States - English', 'Canada - English', 'Canada - Français', 
+export const AMERICA: string[] = ['United States - English', 'Canada - English', 'Canada - Français', 
                 'México - Español', 'Brasil - Português']
 
-export const EUROPE = ['United Kingdom - English', 'Ireland - English', 
+export const EUROPE: string[] = ['United Kingdom - English', 'Ireland - English', 
                 'France - Français', 'España - Español', 'Deutschland - Deutsch', 
                 'Österreich - Deutsch', 'Schweiz - Deutsch', 'Italia - Italiano', 
                 'Polska - Polski', 'Belgium - English', 'Belgique - Français', 
@@ -35,13 +35,75 @@ export const EUROPE = ['United Kingdom - English', 'Ireland - English',
                 'Magyarország - magyar', 'Denmark - English', 'Netherlands - English', 
                 'Norway - English', 'Finland - English', 'Sweden - English']
 
-export const ASIA = ['Australia - English', 'New Zealand - English', 
+export const ASIA: string[] = ['Australia - English', 'New Zealand - English', 
                 'India - English', 'Singapore - English', 'Thailand - English', 
                 'Philippines - English', 'Malaysia - English', 'Indonesia - English', 
                 '繁體中文（台灣）', '繁體中文（香港）']
 
-export const MIDDLE_EAST_AFRICA = ['المملكة العربية السعودية', 'الإمارات العربية المتحدة', 
+export const MIDDLE_EAST_AFRICA: string[] = ['المملكة العربية السعودية', 'الإمارات العربية المتحدة', 
                 'Israel - English', 'South Africa - English']
+
+export const QUESTIONS: QuestionType[] = [
+    {
+        question: 'What type of game is Mortal Kombat 1?',
+        firstAnswer: 'Mortal Kombat 1 is the latest title in the acclaimed Mortal Kombat videogame franchise developed by award-winning NetherRealm Studios. The game will introduce a reborn Mortal Kombat Universe that has been created by the Fire God Liu Kang, featuring reimagined versions of iconic characters as they’ve never been seen before, along with a new fighting system, game modes, bone krushing finishing moves, and more.'
+    },
+    {
+        question: 'Who is developing Mortal Kombat 1?',
+        firstAnswer: 'All versions of Mortal Kombat 1 are built on NetherRealm Studios technology with oversight by NetherRealm. The NetherRealm team is developing the PlayStation 5 and Xbox Series X|S versions of the game.',
+        secondAnswer: 'QLOC is developing the Steam and Epic Games Store versions of the game. Shiver Entertainment and Saber Interactive are developing the Nintendo Switch version of the game.'
+    },
+    {
+        question: 'Who is publishing Mortal Kombat 1?',
+        firstAnswer: 'Warner Bros. Games is publishing Mortal Kombat 1.'
+    },
+    {
+        question: 'When does Mortal Kombat 1 release?',
+        firstAnswer: 'Mortal Kombat 1 is scheduled for worldwide release on Sept. 19, 2023.'
+    },
+    {
+        question: 'Will Mortal Kombat 1 be available for early access?',
+        firstAnswer: " Players who purchase the Mortal Kombat 1 Premium Edition or Mortal Kombat 1 Kollector’s Edition will have early access to the game beginning Sept. 14, 2023."
+    },
+    {
+        question: 'What platforms will Mortal Kombat 1 be available on?',
+        firstAnswer: 'Mortal Kombat 1 will be available for PlayStation 5, Xbox Series X|S, Nintendo Switch, and PC.'
+    },
+    {
+        question: ' Which PC platforms will Mortal Kombat 1 be available on?',
+        firstAnswer: 'Mortal Kombat 1 will be available on PC via Steam and Epic Games Store.'
+    },
+    {
+        question: 'How much does Mortal Kombat 1 cost?',
+        firstAnswer: 'The Mortal Kombat 1 Standard Edition will be available physically and digitally for $69.99 (SRP) on PlayStation 5, Xbox Series X|S, Nintendo Switch, and PC, including Steam and Epic Games Store.',
+        secondAnswer: "The Mortal Kombat 1 Premium Edition will be available physically and digitally for $109.99 (SRP) on PlayStation 5, Xbox Series X|S, Nintendo Switch, and PC (Steam and Epic Games Store) and will include all Standard Edition content, along with the Kombat Pack, early access to the game beginning Sept. 14, and 1,250 Dragon Krystals (in-game currency). The Kombat Pack will feature a Johnny Cage character skin with the likeness of famed actor and martial artist, Jean-Claude Van Damme (available at launch), early access to six new playable characters (available post-launch), and five new Kameo Fighters (available post-launch).",
+        thirdAnswer: "The Mortal Kombat 1 Kollector’s Edition will be available physically at select retailers for $249.99 (SRP) on PlayStation 5 and Xbox Series X|S only and will include all Premium Edition content, and early access, along with a 16.5-inch Liu Kang sculpture designed by COARSE and an inspired Liu Kang in-game character skin, three exclusive art prints, a steel case, and 1,450 additional Dragon Krystals (2,700 total)."
+    },
+    {
+        question: 'Which characters will be available in Mortal Kombat 1?',
+        firstAnswer: 'Mortal Kombat 1 will feature reimagined fighters like they’ve never been seen before, including Liu Kang, Scorpion, Sub-Zero, Raiden, Kung Lao, Kitana, Mileena, Shang Tsung, Johnny Cage, and many others.'
+    },
+    {
+        question: ' What are Kameo Fighters and how do they work in Mortal Kombat 1?',
+        firstAnswer: 'Kameo Fighters are a unique roster of partner characters to assist during matches, creating expanded gameplay possibilities for players. These characters are chosen separately from the main roster of fighters.'
+    },
+    {
+        question: 'What type of modes will Mortal Kombat 1 have?',
+        firstAnswer: 'NetherRealm’s genre-defining Story Mode returns with a brand-new cinematic narrative featuring unexpected twists on classic rivalries and original backstories for the wide-ranging cast of legendary fighters. More details for online and offline modes will be coming soon.'
+    },
+    {
+        question: ' Is an internet connection required to play Mortal Kombat 1?',
+        firstAnswer: 'An internet connection is not required to play Mortal Kombat 1, although players will need to be connected to the internet to experience certain modes and features.'
+    },
+    {
+        question: 'Is a PlayStation Plus subscription, Xbox Live Gold membership, or Nintendo Switch Online membership required to play Mortal Kombat 1?',
+        firstAnswer: 'A PlayStation Plus subscription, Xbox Live Gold, or Nintendo Switch Online membership will not be required to play Mortal Kombat 1 on PlayStation 5, Xbox Series X|S, or Nintendo Switch consoles. However, a PlayStation Plus subscription, Xbox Live Gold membership, or Nintendo Switch Online membership will be required for online multiplayer.'
+    },
+    {
+        question: 'Will Mortal Kombat 1 have rollback netcode?',
+        firstAnswer: 'Yes, Mortal Kombat 1 will have rollback netcode to support online gameplay.'
+    }
+]
 
 export const FIGHTERS: FighterType[] = [
     {
