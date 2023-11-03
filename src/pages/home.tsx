@@ -1,7 +1,7 @@
 import ReactPlayer from "react-player";
-import logo from '../assets/images/mk1-logo-tm.webp'
-import liuKang from '../assets/images/liu-kang-wfire.webp'
-import mk1Logo from '../assets/images/sigil.webp'
+import logo from '../assets/images/different/mk1-logo-tm.webp'
+import liuKang from '../assets/images/different/liu-kang-wfire.webp'
+import mk1Logo from '../assets/images/different/sigil.webp'
 import { MainNav } from "../components/mainNav";
 import {LiaPlaySolid} from "react-icons/lia"
 import { FireFrame } from "../components/fireFrame";

@@ -1,10 +1,10 @@
 import { MainNav } from "../components/mainNav"
-import mkLogo from '../assets/images/logo-blue.svg'
+import mkLogo from '../assets/images/different/logo-blue.svg'
 import { useContext } from "react"
 import { MKContext } from "../utils/context"
 import { FireFrame } from "../components/fireFrame"
-import mk1Logo from '../assets/images/sigil.webp'
-import logo from '../assets/images/mk1-logo-tm.webp'
+import mk1Logo from '../assets/images/different/sigil.webp'
+import logo from '../assets/images/different/mk1-logo-tm.webp'
 import { VideoRender } from "../components/videoRender"
 import { MEDIA_VIDEOS, FIGHTERS_VIDEOS, EXTRAS_VIDEOS } from "../utils/data"
 import { VideoModal } from "../components/modal windows/videoModal"

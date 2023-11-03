@@ -1,4 +1,4 @@
-import { FighterType, QuestionType, VideoType } from "./types"
+import { AmbassadorType, FighterType, QuestionType, VideoType } from "./types"
 import liuKang from '../assets/images/fighters/liuKang.webp'
 import subZero from '../assets/images/fighters/sub-zero.webp'
 import scorpion from '../assets/images/fighters/scorpion.webp'
@@ -22,7 +22,15 @@ import SINDEL from '../assets/images/fighters/SINDEL.webp'
 import GENERAL from '../assets/images/fighters/GENERAL.webp'
 import NITARA from '../assets/images/fighters/NITARA.webp'
 import SHANGTSUNG from '../assets/images/fighters/SHANGTSUNG.webp'
-
+import JulienPostImg from '../assets/images/kollective/julien-rico-jr-featured.jpg'
+import FlaviuPostImg from '../assets/images/kollective/flaviu-pop-featured.jpg'
+import LemonadePostImg from '../assets/images/kollective/mr-lemonade-featured.jpg'
+import BenPostImg from '../assets/images/kollective/ben-terdik-featured.jpg'
+import DustinPostImg from '../assets/images/kollective/dustin-massey-featured.jpg'
+import MiriamPostImg from '../assets/images/kollective/miriam-hoffmann-featured.jpg'
+import MimiPostImg from '../assets/images/kollective/mimi-choi-featured.jpg'
+import ClairePostImg from '../assets/images/kollective/claire-salvo-featured.jpg'
+import ErikPostImg from '../assets/images/kollective/erik-ly-featured.jpg'
 
 export const AMERICA: string[] = ['United States - English', 'Canada - English', 'Canada - Français', 
                 'México - Español', 'Brasil - Português']
@@ -382,7 +390,6 @@ export const FIGHTERS_VIDEOS: VideoType[] = [
     }
 ]
 
-
 export const EXTRAS_VIDEOS: VideoType[] = [
     {
         title: 'Pro Kompetition 23/24 Announcement',
@@ -398,5 +405,241 @@ export const EXTRAS_VIDEOS: VideoType[] = [
         title: '“Fatal” by ZHU Official Track',
         videoUrl: 'https://www.youtube.com/watch?v=x2oExuKa73g',
         imageUrl: 'https://cdn-mk1.mortalkombat.com/media/fatal-trailer.jpg'
+    }
+]
+
+export const AMBASSADORS: AmbassadorType[] = [
+    {
+        name: "Julien Rico Jr",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/julien-rico-jr.jpg",
+        postImage: JulienPostImg,
+        postLink: "https://www.instagram.com/p/CupKgUTIQeW/?img_index=1",
+        facebookLink: "https://www.facebook.com/ricojrcreation",
+        instagramLink: "https://www.instagram.com/julienricojr/",
+        twitterLink: "https://twitter.com/ricojrcrea", 
+        frontSide: true
+    },
+    {
+        name: "Kanat Nurtazin",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/kanat-nurtazin.jpg",
+        instagramLink: "https://www.instagram.com/kanat_n/",
+        tiktokLink: "https://www.tiktok.com/@kanat_n",
+        frontSide: true
+    },
+    {
+        name: "Nicky Barkla",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/nicky-barkla.jpg",
+        facebookLink: "https://www.facebook.com/NickyBarklaArt",
+        instagramLink: "https://www.instagram.com/nickybarkla/",
+        twitterLink: "https://twitter.com/nickybarkla", 
+        frontSide: true
+    },
+    {
+        name: "Flaviu Pop",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/flaviu-pop.jpg",
+        postImage: FlaviuPostImg,
+        postLink: "https://www.instagram.com/p/CvakB1lMM6J/?img_index=1",
+        facebookLink: "https://www.facebook.com/BigBrotherPaints",
+        instagramLink: "https://www.instagram.com/leaking_colour/",
+        behanceLink: "https://www.behance.net/flaviu_pop",
+        frontSide: true
+    },
+    {
+        name: "Mr. Lemonade",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/mr-lemonade.jpg",
+        postImage: LemonadePostImg,
+        postLink: "https://www.instagram.com/p/Cu-n8nduD6C/?img_index=1",
+        instagramLink: "https://www.instagram.com/mrlemonademx/",
+        youtubeLink: "https://www.youtube.com/mrlemonademx",
+        frontSide: true
+    },
+    {
+        name: "@Urbanaztec",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/urbanaztec.jpg",
+        instagramLink: "https://www.instagram.com/Urbanaztec/",
+        frontSide: true
+    },
+    {
+        name: "Ben Terdik",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/ben-terdik.jpg",
+        postImage: BenPostImg,
+        postLink: "https://www.instagram.com/p/CuZ-JDlKDJN/",
+        facebookLink: "https://www.facebook.com/benterdikart",
+        instagramLink: "https://www.instagram.com/benterdikart/",
+        twitterLink: "https://twitter.com/benterdik", 
+        behanceLink: "https://www.behance.net/benjaminterdik",
+        frontSide: true
+    },
+    {
+        name: "Dustin Massey",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/dustin-massey.jpg",
+        postImage: DustinPostImg,
+        postLink: "https://www.instagram.com/p/CuhXAlrLevf/",
+        instagramLink: "https://www.instagram.com/dustinleemassey/",
+        frontSide: true
+    },
+    {
+        name: "Alex Trpcevski",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/alex-trpcevski.jpg",
+        instagramLink: "https://www.instagram.com/trip_design_studio/",
+        frontSide: true
+    },
+    {
+        name: "Alex Yanes",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/alex-yanes.jpg",
+        instagramLink: "https://www.instagram.com/alexyanes/",
+        frontSide: true
+    },
+    {
+        name: "Miriam Hoffmann",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/miriam-hoffmann.jpg",
+        postImage: MiriamPostImg,
+        postLink: "https://www.instagram.com/p/CxGEDqgups2/",
+        instagramLink: "https://www.instagram.com/miriamhoffmann_art/",
+        tiktokLink: "https://www.tiktok.com/@miriam_hoffmann",
+        frontSide: true
+    },
+    {
+        name: "Mimi Choi",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/mimi-choi.jpg",
+        postImage: MimiPostImg,
+        postLink: "https://www.instagram.com/p/CvM6dZdrvVk/?img_index=1",
+        instagramLink: "https://www.instagram.com/mimles/",
+        tiktokLink: "https://www.tiktok.com/@mimles",
+        youtubeLink: "https://www.youtube.com/mimles",
+        frontSide: true
+    },
+    {
+        name: "Claire Salvo",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/claire-salvo.jpg",
+        postImage: ClairePostImg,
+        postLink: "https://www.instagram.com/reel/Cvp7Yj5Aqdk/",
+        instagramLink: "https://www.instagram.com/clairesalvo/",
+        tiktokLink: "https://www.tiktok.com/@clairesalvo",
+        twitterLink: "https://twitter.com/claire_salvo", 
+        frontSide: true
+    },
+    {
+        name: "Vivian Rahey",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/vivian-rahey.jpg",
+        facebookLink: "https://www.facebook.com/vivxue/",
+        instagramLink: "https://www.instagram.com/vivxue/",
+        tiktokLink: "https://www.tiktok.com/@vivxue",
+        frontSide: true
+    },
+    {
+        name: "Nimrod",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/nimrod.jpg",
+        instagramLink: "https://www.instagram.com/nimrodarte/",
+        frontSide: true
+    },
+    {
+        name: "Ryan Smallman",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/ryan-smallman.jpg",
+        instagramLink: "https://www.instagram.com/ryansmallman/",
+        frontSide: true
+    },
+    {
+        name: "Alicia Marie",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/alicia-marie.jpg",
+        facebookLink: "https://www.facebook.com/AliciaMarieLive",
+        instagramLink: "https://www.instagram.com/AliciaMarieBODY/",
+        tiktokLink: "https://www.tiktok.com/@AliciaMarieBODY",
+        twitterLink: "https://twitter.com/AliciaMarieBODY", 
+        frontSide: true
+    },
+    {
+        name: "Loud Cloud Animation",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/loud-cloud-animation.jpg",
+        instagramLink: "https://www.instagram.com/loudcloud_animation/",
+        frontSide: true
+    },
+    {
+        name: "Erik Ly",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/erik-ly.jpg",
+        postImage: ErikPostImg,
+        postLink: "https://www.instagram.com/p/CwikblrvBBz/?img_index=1",
+        instagramLink: "https://www.instagram.com/eriklyart/",
+        frontSide: true
+    },
+    {
+        name: "Starkey Custom Co",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/starkey-custom-co.jpg",
+        instagramLink: "https://www.instagram.com/starkeycustomco/",
+        tiktokLink: "https://www.tiktok.com/@starkeycustomco",
+        frontSide: true
+    },
+    {
+        name: "Núbia Moraes",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/nubia-moraes.jpg",
+        instagramLink: "https://www.instagram.com/nubiamoraescakes/",
+        frontSide: true
+    },
+    {
+        name: "Mache",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/mache.jpg",
+        instagramLink: "https://www.instagram.com/mache275/",
+        twitterLink: "https://twitter.com/mache275", 
+        frontSide: true
+    },
+    {
+        name: "@tylerturnbullart",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/tylerturnbullart.jpg",
+        instagramLink: "https://www.instagram.com/tylerturnbullart/",
+        frontSide: true
+    },
+    {
+        name: "Oskunk",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/oskunk.jpg",
+        instagramLink: "https://www.instagram.com/oskunk_/",
+        tiktokLink: "https://www.tiktok.com/@oskunk_",
+        frontSide: true
+    },
+    {
+        name: "King Vader",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/king-vader.jpg",
+        instagramLink: "https://www.instagram.com/kingvader/",
+        tiktokLink: "https://www.tiktok.com/@kingvader",
+        youtubeLink: "https://www.youtube.com/KINGVADERofficial",
+        frontSide: true
+    },
+    {
+        name: "Louiekah",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/louiekah.jpg",
+        instagramLink: "https://www.instagram.com/louiekah/",
+        frontSide: true
+    },
+    {
+        name: "Sadia Props",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/sadia-props.jpg",
+        instagramLink: "https://www.instagram.com/saidaprops/",
+        tiktokLink: "https://www.tiktok.com/@saidaprops",
+        frontSide: true
+    },
+    {
+        name: "Branko Ricov",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/branko-ricov.jpg",
+        facebookLink: "https://www.facebook.com/brankoricovdesign",
+        instagramLink: "https://www.instagram.com/branko_ricov/",
+        twitterLink: "https://twitter.com/i/flow/login?redirect_after_login=%2FRicoMamboTees", 
+        frontSide: true
+    },
+    {
+        name: "Kannibal Ferox",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/kannibal-ferox.jpg",
+        frontSide: true
+    },
+    {
+        name: "ThiagoScorp",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/thiago-scorp.jpg",
+        instagramLink: "https://www.instagram.com/thiago.scorp/",
+        frontSide: true
+    },
+    {
+        name: "RoyalBurrowsDice",
+        imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/royalburrowsdice.jpg",
+        instagramLink: "https://www.instagram.com/royalburrowsdice/",
+        tiktokLink: "https://www.tiktok.com/@royalburrowsdice",
+        frontSide: true
     }
 ]

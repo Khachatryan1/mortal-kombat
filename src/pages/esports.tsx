@@ -1,8 +1,8 @@
 import { FireFrame } from "../components/fireFrame"
 import { MainNav } from "../components/mainNav"
-import mk1Logo from '../assets/images/sigil.webp'
-import logo from '../assets/images/mk1-logo-tm.webp'
-import mkLogo from '../assets/images/logo-blue.svg'
+import mk1Logo from '../assets/images/different/sigil.webp'
+import logo from '../assets/images/different/mk1-logo-tm.webp'
+import mkLogo from '../assets/images/different/logo-blue.svg'
 import { useContext } from "react"
 import { MKContext } from "../utils/context"
 import competitionLogo from '../assets/images/esports/mk1-pro-kompetition-2023-2024.webp'
@@ -19,12 +19,12 @@ export const Esports = () => {
 
     return (
         <div className="sports-container">
-            <div className="media-nav-container">
-                <div onClick={goHome} className="media-nav-logo-container">
+            <div className="sports-nav-container">
+                <div onClick={goHome} className="sports-nav-logo-container">
                     <img src={mkLogo} alt="mk1 logo" />
                 </div>
-                <MainNav className="media-main-nav"/>
-                <button onClick={handlePurchase} className="media-nav-buy-button">
+                <MainNav className="sports-main-nav"/>
+                <button onClick={handlePurchase} className="sports-nav-buy-button">
                     <span>BUY NOW</span>
                 </button>
             </div>

@@ -1,5 +1,5 @@
 import { MainNav } from "../components/mainNav"
-import mkLogo from '../assets/images/logo-blue.svg'
+import mkLogo from '../assets/images/different/logo-blue.svg'
 import rosterSmoke from '../assets/videos/roster-smoke.mp4'
 import { FIGHTERS } from "../utils/data"
 import { useContext, useState } from "react"
@@ -7,8 +7,8 @@ import { MKContext } from "../utils/context"
 import { FighterType } from "../utils/types"
 import ReactPlayer from "react-player"
 import { FireFrame } from "../components/fireFrame"
-import mk1Logo from '../assets/images/sigil.webp'
-import logo from '../assets/images/mk1-logo-tm.webp'
+import mk1Logo from '../assets/images/different/sigil.webp'
+import logo from '../assets/images/different/mk1-logo-tm.webp'
 
 
 export const Roster = () => {

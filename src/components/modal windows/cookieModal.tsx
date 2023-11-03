@@ -1,5 +1,5 @@
 import { GrFormClose } from "react-icons/gr"
-import WBLogo from '../../assets/images/WB_Logo.png'
+import WBLogo from '../../assets/images/different/WB_Logo.png'
 import { MKContext } from "../../utils/context"
 import { useContext } from "react"
 

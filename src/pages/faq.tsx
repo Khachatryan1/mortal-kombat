@@ -2,9 +2,9 @@ import { memo, useContext } from "react"
 import { FireFrame } from "../components/fireFrame"
 import { MainNav } from "../components/mainNav"
 import { MKContext } from "../utils/context"
-import mkLogo from '../assets/images/logo-blue.svg'
-import mk1Logo from '../assets/images/sigil.webp'
-import logo from '../assets/images/mk1-logo-tm.webp'
+import mkLogo from '../assets/images/different/logo-blue.svg'
+import mk1Logo from '../assets/images/different/sigil.webp'
+import logo from '../assets/images/different/mk1-logo-tm.webp'
 import { QUESTIONS } from "../utils/data"
 
 export const Fac = memo(() => {

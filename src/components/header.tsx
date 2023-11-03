@@ -1,4 +1,4 @@
-import logo from '../assets/images/wb-logo.svg'
+import logo from '../assets/images/different/wb-logo.svg'
 import { TbWorld } from "react-icons/tb"
 import { AiFillBug, AiFillYoutube, AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai"
 import { HiOutlineSupport } from "react-icons/hi"
@@ -28,7 +28,9 @@ export const Header = memo(() => {
         headerClassName = 'blue-header'
     } else if (location.pathname === '/ESPORTS') {
         headerClassName = 'blue-header'
-    }
+    } else if (location.pathname === '/MKKOLLECTIVE') {
+        headerClassName = 'transparent-header'
+    } 
 
     const handleLanguageModal = () => {
         setShowLanguageModal(true)

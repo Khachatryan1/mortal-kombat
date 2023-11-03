@@ -50,3 +50,28 @@ export type QuestionType = {
     secondAnswer?: string
     thirdAnswer?: string
 }
+
+export type AmbassadorType = {
+    name: string
+    imgLink: string
+    frontSide: boolean
+    postLink?: string
+    postImage?: string
+    facebookLink?: string
+    instagramLink?: string
+    tiktokLink?: string
+    twitterLink?: string 
+    behanceLink?: string
+    youtubeLink?: string
+}
+
+export type AmbassadorProps = {
+    ambassador: AmbassadorType
+    isActive: boolean
+    handleCardClick: (imgLink: string) => void
+}
+
+export type PostProps = {
+    ambassador: AmbassadorType
+    className: string
+}
