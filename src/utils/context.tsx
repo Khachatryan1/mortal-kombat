@@ -1,5 +1,5 @@
 import { createContext, useRef, useState } from "react"
-import { ContextType } from "./types"
+import { ContextType, FighterType } from "./types"
 import { useNavigate } from "react-router"
 
 export const MKContext = createContext<ContextType>({
@@ -15,7 +15,11 @@ export const MKContext = createContext<ContextType>({
     handlePurchase: () => {},
     headerRef: {current: null},
     videoLink: '',
-    setVideoLink: () => {}
+    setVideoLink: () => {},
+    showFighterModal: false,
+    setShowFighterModal: () => {},
+    fighter: null,
+    setFighter: () => {}
 })
 
 
@@ -23,6 +27,8 @@ export const MKContextWrapper = ({ children }: { children: React.ReactNode }) =>
     const [showCookieModal, setShowCookieModal] = useState(false)
     const [showLanguageModal, setShowLanguageModal] = useState(false)
     const [showVideoModal, setShowVideoModal] = useState(false)
+    const [showFighterModal, setShowFighterModal] = useState(false)
+    const [fighter, setFighter] = useState<FighterType | null>(null)
     const [language, setLanguage] = useState('United States - English')
     const [videoLink, setVideoLink] = useState('')
     const headerRef = useRef<HTMLDivElement>(null)
@@ -53,7 +59,11 @@ export const MKContextWrapper = ({ children }: { children: React.ReactNode }) =>
         handlePurchase,
         headerRef,
         videoLink,
-        setVideoLink
+        setVideoLink,
+        fighter,
+        setFighter,
+        showFighterModal,
+        setShowFighterModal
     }
 
     return (

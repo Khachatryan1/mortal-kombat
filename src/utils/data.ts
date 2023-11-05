@@ -417,14 +417,12 @@ export const AMBASSADORS: AmbassadorType[] = [
         facebookLink: "https://www.facebook.com/ricojrcreation",
         instagramLink: "https://www.instagram.com/julienricojr/",
         twitterLink: "https://twitter.com/ricojrcrea", 
-        frontSide: true
     },
     {
         name: "Kanat Nurtazin",
         imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/kanat-nurtazin.jpg",
         instagramLink: "https://www.instagram.com/kanat_n/",
         tiktokLink: "https://www.tiktok.com/@kanat_n",
-        frontSide: true
     },
     {
         name: "Nicky Barkla",
@@ -432,7 +430,6 @@ export const AMBASSADORS: AmbassadorType[] = [
         facebookLink: "https://www.facebook.com/NickyBarklaArt",
         instagramLink: "https://www.instagram.com/nickybarkla/",
         twitterLink: "https://twitter.com/nickybarkla", 
-        frontSide: true
     },
     {
         name: "Flaviu Pop",
@@ -442,7 +439,6 @@ export const AMBASSADORS: AmbassadorType[] = [
         facebookLink: "https://www.facebook.com/BigBrotherPaints",
         instagramLink: "https://www.instagram.com/leaking_colour/",
         behanceLink: "https://www.behance.net/flaviu_pop",
-        frontSide: true
     },
     {
         name: "Mr. Lemonade",
@@ -451,13 +447,11 @@ export const AMBASSADORS: AmbassadorType[] = [
         postLink: "https://www.instagram.com/p/Cu-n8nduD6C/?img_index=1",
         instagramLink: "https://www.instagram.com/mrlemonademx/",
         youtubeLink: "https://www.youtube.com/mrlemonademx",
-        frontSide: true
     },
     {
         name: "@Urbanaztec",
         imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/urbanaztec.jpg",
         instagramLink: "https://www.instagram.com/Urbanaztec/",
-        frontSide: true
     },
     {
         name: "Ben Terdik",
@@ -468,7 +462,6 @@ export const AMBASSADORS: AmbassadorType[] = [
         instagramLink: "https://www.instagram.com/benterdikart/",
         twitterLink: "https://twitter.com/benterdik", 
         behanceLink: "https://www.behance.net/benjaminterdik",
-        frontSide: true
     },
     {
         name: "Dustin Massey",
@@ -476,19 +469,16 @@ export const AMBASSADORS: AmbassadorType[] = [
         postImage: DustinPostImg,
         postLink: "https://www.instagram.com/p/CuhXAlrLevf/",
         instagramLink: "https://www.instagram.com/dustinleemassey/",
-        frontSide: true
     },
     {
         name: "Alex Trpcevski",
         imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/alex-trpcevski.jpg",
         instagramLink: "https://www.instagram.com/trip_design_studio/",
-        frontSide: true
     },
     {
         name: "Alex Yanes",
         imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/alex-yanes.jpg",
         instagramLink: "https://www.instagram.com/alexyanes/",
-        frontSide: true
     },
     {
         name: "Miriam Hoffmann",
@@ -497,7 +487,6 @@ export const AMBASSADORS: AmbassadorType[] = [
         postLink: "https://www.instagram.com/p/CxGEDqgups2/",
         instagramLink: "https://www.instagram.com/miriamhoffmann_art/",
         tiktokLink: "https://www.tiktok.com/@miriam_hoffmann",
-        frontSide: true
     },
     {
         name: "Mimi Choi",
@@ -507,7 +496,6 @@ export const AMBASSADORS: AmbassadorType[] = [
         instagramLink: "https://www.instagram.com/mimles/",
         tiktokLink: "https://www.tiktok.com/@mimles",
         youtubeLink: "https://www.youtube.com/mimles",
-        frontSide: true
     },
     {
         name: "Claire Salvo",
@@ -517,7 +505,6 @@ export const AMBASSADORS: AmbassadorType[] = [
         instagramLink: "https://www.instagram.com/clairesalvo/",
         tiktokLink: "https://www.tiktok.com/@clairesalvo",
         twitterLink: "https://twitter.com/claire_salvo", 
-        frontSide: true
     },
     {
         name: "Vivian Rahey",
@@ -525,19 +512,16 @@ export const AMBASSADORS: AmbassadorType[] = [
         facebookLink: "https://www.facebook.com/vivxue/",
         instagramLink: "https://www.instagram.com/vivxue/",
         tiktokLink: "https://www.tiktok.com/@vivxue",
-        frontSide: true
     },
     {
         name: "Nimrod",
         imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/nimrod.jpg",
         instagramLink: "https://www.instagram.com/nimrodarte/",
-        frontSide: true
     },
     {
         name: "Ryan Smallman",
         imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/ryan-smallman.jpg",
         instagramLink: "https://www.instagram.com/ryansmallman/",
-        frontSide: true
     },
     {
         name: "Alicia Marie",
@@ -546,13 +530,11 @@ export const AMBASSADORS: AmbassadorType[] = [
         instagramLink: "https://www.instagram.com/AliciaMarieBODY/",
         tiktokLink: "https://www.tiktok.com/@AliciaMarieBODY",
         twitterLink: "https://twitter.com/AliciaMarieBODY", 
-        frontSide: true
     },
     {
         name: "Loud Cloud Animation",
         imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/loud-cloud-animation.jpg",
         instagramLink: "https://www.instagram.com/loudcloud_animation/",
-        frontSide: true
     },
     {
         name: "Erik Ly",
@@ -560,40 +542,34 @@ export const AMBASSADORS: AmbassadorType[] = [
         postImage: ErikPostImg,
         postLink: "https://www.instagram.com/p/CwikblrvBBz/?img_index=1",
         instagramLink: "https://www.instagram.com/eriklyart/",
-        frontSide: true
     },
     {
         name: "Starkey Custom Co",
         imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/starkey-custom-co.jpg",
         instagramLink: "https://www.instagram.com/starkeycustomco/",
         tiktokLink: "https://www.tiktok.com/@starkeycustomco",
-        frontSide: true
     },
     {
         name: "Núbia Moraes",
         imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/nubia-moraes.jpg",
         instagramLink: "https://www.instagram.com/nubiamoraescakes/",
-        frontSide: true
     },
     {
         name: "Mache",
         imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/mache.jpg",
         instagramLink: "https://www.instagram.com/mache275/",
         twitterLink: "https://twitter.com/mache275", 
-        frontSide: true
     },
     {
         name: "@tylerturnbullart",
         imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/tylerturnbullart.jpg",
         instagramLink: "https://www.instagram.com/tylerturnbullart/",
-        frontSide: true
     },
     {
         name: "Oskunk",
         imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/oskunk.jpg",
         instagramLink: "https://www.instagram.com/oskunk_/",
         tiktokLink: "https://www.tiktok.com/@oskunk_",
-        frontSide: true
     },
     {
         name: "King Vader",
@@ -601,20 +577,17 @@ export const AMBASSADORS: AmbassadorType[] = [
         instagramLink: "https://www.instagram.com/kingvader/",
         tiktokLink: "https://www.tiktok.com/@kingvader",
         youtubeLink: "https://www.youtube.com/KINGVADERofficial",
-        frontSide: true
     },
     {
         name: "Louiekah",
         imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/louiekah.jpg",
         instagramLink: "https://www.instagram.com/louiekah/",
-        frontSide: true
     },
     {
         name: "Sadia Props",
         imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/sadia-props.jpg",
         instagramLink: "https://www.instagram.com/saidaprops/",
         tiktokLink: "https://www.tiktok.com/@saidaprops",
-        frontSide: true
     },
     {
         name: "Branko Ricov",
@@ -622,24 +595,20 @@ export const AMBASSADORS: AmbassadorType[] = [
         facebookLink: "https://www.facebook.com/brankoricovdesign",
         instagramLink: "https://www.instagram.com/branko_ricov/",
         twitterLink: "https://twitter.com/i/flow/login?redirect_after_login=%2FRicoMamboTees", 
-        frontSide: true
     },
     {
         name: "Kannibal Ferox",
         imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/kannibal-ferox.jpg",
-        frontSide: true
     },
     {
         name: "ThiagoScorp",
         imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/thiago-scorp.jpg",
         instagramLink: "https://www.instagram.com/thiago.scorp/",
-        frontSide: true
     },
     {
         name: "RoyalBurrowsDice",
         imgLink: "https://cdn-mk1.mortalkombat.com/kollective/ambassadors/royalburrowsdice.jpg",
         instagramLink: "https://www.instagram.com/royalburrowsdice/",
         tiktokLink: "https://www.tiktok.com/@royalburrowsdice",
-        frontSide: true
     }
 ]

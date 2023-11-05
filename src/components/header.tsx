@@ -5,32 +5,42 @@ import { HiOutlineSupport } from "react-icons/hi"
 import { BiLogoTiktok } from "react-icons/bi"
 import { BsTwitch, BsDiscord } from "react-icons/bs"
 import { NavLink, useLocation } from 'react-router-dom'
-import { memo, useContext } from 'react'
+import { memo, useContext, useEffect } from 'react'
 import { MKContext } from '../utils/context'
 
 export const Header = memo(() => {
     const {setShowLanguageModal, language, headerRef} = useContext(MKContext)
     const location = useLocation()
 
-    let headerClassName = 'transparent-header'
+    const transparentPaths = ['/', '/GAME%20INFO', '/MKKOLLECTIVE'];
+    const headerClassName = transparentPaths.includes(location.pathname) ? 'transparent-header' : 'blue-header';
+    
+    useEffect(() => {
+        document.title = getTitleFromPath(location.pathname)
+    }, [location]);
 
-    if (location.pathname === '/') {
-        headerClassName = 'transparent-header'
-    } else if (location.pathname === '/buy%20now') {
-        headerClassName = 'blue-header'
-    } else if (location.pathname === '/GAME%20INFO') {
-        headerClassName = 'transparent-header'
-    } else if (location.pathname === '/ROSTER') {
-        headerClassName = 'blue-header'
-    } else if (location.pathname === '/MEDIA') {
-        headerClassName = 'blue-header'
-    } else if (location.pathname === '/FAQ') {
-        headerClassName = 'blue-header'
-    } else if (location.pathname === '/ESPORTS') {
-        headerClassName = 'blue-header'
-    } else if (location.pathname === '/MKKOLLECTIVE') {
-        headerClassName = 'transparent-header'
-    } 
+    const getTitleFromPath = (location: string) => {
+        switch (location) {
+            case '/':
+                return 'HOME - Mortal Kombat 1'
+            case '/buy%20now':
+                return 'BUY NOW - Mortal Kombat 1'
+            case '/GAME%20INFO':
+                return 'GAME INFO - Mortal Kombat 1'
+            case '/ROSTER':
+                return 'ROSTER - Mortal Kombat 1'
+            case '/MEDIA':
+                return 'MEDIA - Mortal Kombat 1'
+            case '/FAQ':
+                return 'FREQUENTLY ASKED QUESTIONS'
+            case '/ESPORTS':
+                return 'ESPORTS - Mortal Kombat 1'
+            case '/MKKOLLECTIVE':
+                return '#MKKOLLECTIVE AMBASSADORS'
+            default:
+                return 'Mortal Kombat 1'
+        }
+    }
 
     const handleLanguageModal = () => {
         setShowLanguageModal(true)

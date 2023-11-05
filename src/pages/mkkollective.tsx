@@ -3,7 +3,7 @@ import { MainNav } from "../components/mainNav"
 import mk1Logo from '../assets/images/different/sigil.webp'
 import logo from '../assets/images/different/mk1-logo-tm.webp'
 import mkLogo from '../assets/images/different/mk1-logo-tm.webp'
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { MKContext } from "../utils/context"
 import fireDown from '../assets/videos/fire-line-bot.mp4'
 import { AMBASSADORS } from "../utils/data"
@@ -13,7 +13,7 @@ import { AmbassadorType } from "../utils/types"
 import { Ambassador } from "../components/ambassador"
 import { Post } from "../components/post"
 import React from "react"
-
+import { FireFrame } from "../components/fireFrame"
 
 
 
@@ -21,6 +21,7 @@ export const MkKollective = () => {
     const {goHome, handlePurchase} = useContext(MKContext)
     const [activeCard, setActiveCard] = useState('');
 
+    
     const handleCardClick = (imgLink: string) => {
         if (activeCard === imgLink) {
             setActiveCard('')
@@ -29,8 +30,10 @@ export const MkKollective = () => {
         }
     }
 
-    const mainAmbassador: AmbassadorType = AMBASSADORS.find((ambassador) => ambassador.name === 'Miriam Hoffmann') as AmbassadorType
+    
 
+    const mainAmbassador: AmbassadorType = AMBASSADORS.find((ambassador) => ambassador.name === 'Miriam Hoffmann') as AmbassadorType
+    const posts: AmbassadorType[] = AMBASSADORS.filter((ambassador) => ambassador.postLink && ambassador.name !== mainAmbassador.name)
     const videoUrl = 'https://cdn-mk1.mortalkombat.com/home/hero.mp4'
 
 
@@ -73,10 +76,33 @@ export const MkKollective = () => {
                         })
                     }
                 </div>
+                <div className="coming-soon">
+                    <p>More Artists Coming Soon</p>
+                </div>
                 <div className="kollective-posts-container">
-
+                    <h2>OTHER FEATURED POSTS</h2>
+                    <div className="posts-container">
+                        {
+                            posts.map((ambassador) => <React.Fragment key={ambassador.behanceLink}>
+                                    <Post ambassador={ambassador} className="kollective-post"/>
+                                </React.Fragment>)
+                        }
+                    </div>
                 </div>
             </div>
+            <FireFrame>
+                <div className="buy-now-bottom">       
+                    <div className="mk1Logo-img-container">
+                        <img src={mk1Logo} alt="mk 1 Logo" />
+                    </div>
+                    <div className="logo-container">
+                        <img src={logo} alt="logo" />
+                    </div>
+                    <button onClick={handlePurchase} className="buy-now-button-bottom">
+                        <span>BUY NOW</span>
+                    </button>
+                </div>
+            </FireFrame>
         </div>
     )
 }

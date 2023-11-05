@@ -14,6 +14,10 @@ export type ContextType = {
     headerRef: LegacyRef<HTMLDivElement>
     videoLink: string
     setVideoLink: React.Dispatch<React.SetStateAction<string>>
+    showFighterModal: boolean
+    setShowFighterModal: React.Dispatch<React.SetStateAction<boolean>>
+    fighter: FighterType | null
+    setFighter: React.Dispatch<React.SetStateAction<FighterType | null>>
 }
 
 export type VideoModalProps = {
@@ -54,7 +58,6 @@ export type QuestionType = {
 export type AmbassadorType = {
     name: string
     imgLink: string
-    frontSide: boolean
     postLink?: string
     postImage?: string
     facebookLink?: string
@@ -74,4 +77,8 @@ export type AmbassadorProps = {
 export type PostProps = {
     ambassador: AmbassadorType
     className: string
+}
+
+export type FighterModalProps = {
+    fighter: FighterType | null
 }

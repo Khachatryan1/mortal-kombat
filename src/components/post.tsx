@@ -15,9 +15,10 @@ export const Post = ({ambassador, className}: PostProps) => {
             <h2>{ambassador.name}</h2>
             <div className="visit-post-container">
                 <a href={ambassador.postLink} target="_blank">
-                    Visit Post <RiExternalLinkLine/>
+                    Visit Post <RiExternalLinkLine className="post-icon"/>
                 </a>
             </div>
+            <div className="shadow"></div>
         </div>
     )
 }
