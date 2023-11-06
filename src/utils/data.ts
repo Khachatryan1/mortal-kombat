@@ -116,6 +116,7 @@ export const QUESTIONS: QuestionType[] = [
 export const FIGHTERS: FighterType[] = [
     {
         name: 'LIU KANG',
+        index: 1,
         img: liuKang,
         purpose: 'SECURITY',
         essence: 'God of Fire',
@@ -124,6 +125,7 @@ export const FIGHTERS: FighterType[] = [
     },
     {
         name: 'SUB-ZERO',
+        index: 2,
         img: subZero,
         purpose: 'POWER',
         essence: 'Grandmaster of the Lin Kuei',
@@ -132,6 +134,7 @@ export const FIGHTERS: FighterType[] = [
     },
     {
         name: 'SCORPION',
+        index: 3,
         img: scorpion,
         purpose: 'HONOR',
         essence: 'Revered Lin Kuei Warrior',
@@ -141,6 +144,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: 'KITANA',
         img: kitana,
+        index: 4,
         purpose: 'DUTY',
         essence: 'Princess of Outworld',
         firstDescription: "Kitana has one purpose in life: to aid and protect her older sister, Mileena, as she prepares to rule Outworld one day.",
@@ -149,6 +153,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: 'JOHNNY CAGE',
         img: johnny,
+        index: 5,
         purpose: 'VANITY',
         essence: '21st Century Action Hero',
         firstDescription: "Like many stars before him, Johnny became addicted to his fame. He came to measure his self-worth by his fans' adoration and their praise of him on social media.",
@@ -157,6 +162,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: 'KENSHI TAKAHASHI',
         img: kenshi,
+        index: 6,
         purpose: 'REVIVAL',
         essence: 'Restorer of His Family’s Name',
         firstDescription: "Once one of ancient Japan's most honored families, the Takahashis were decimated in battle. They lost everything, including the emblem of their power: the revered sword, Sento. Those who survived joined the Bakuto, a predecessor of the Yakuza, for its protection.",
@@ -166,6 +172,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: 'KUNG LAO',
         img: kunglao,
+        index: 7,
         purpose: 'PRESTIGE',
         essence: 'Youthful Warrior with Dreams of Glory',
         firstDescription: "Born and raised in the village of Fengjian, Kung Lao has spent his life toiling in the fields. It has been an honorable life, if not a glorious one.",
@@ -174,6 +181,7 @@ export const FIGHTERS: FighterType[] = [
     },
     {
         name: 'MILEENA',
+        index: 8,
         img: MILEENA,
         purpose: 'RESPECT',
         essence: 'Heir to Outworld’s Throne',
@@ -183,6 +191,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: 'RAIDEN',
         img: RAIDEN,
+        index: 9,
         purpose: 'STABILITY',
         essence: 'Champion of Earthrealm',
         firstDescription: "In the village of Fengjian, Raiden was known for his kindness and his charity. He was happy to spend his days tending to the fields, as well as to his friends and family.",
@@ -191,6 +200,7 @@ export const FIGHTERS: FighterType[] = [
     },
     {
         name: 'RAIN',
+        index: 10,
         img: RAIN,
         purpose: 'AMBITION',
         essence: 'High Mage of Outworld',
@@ -199,6 +209,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: 'SMOKE',
         img: SMOKE,
+        index: 11,
         purpose: 'LOYALTY',
         essence: 'Master of Stealth',
         firstDescription: "As a boy, Smoke lived to hunt with his family. Their final hunt, however, ended in tragedy. Having accidentally trespassed onto Lin Kuei lands, they were attacked. Smoke was orphaned.",
@@ -208,6 +219,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: 'LI MEI',
         img: MEI,
+        index: 12,
         purpose: 'REDEMPTION',
         essence: 'First Constable of Sun Do',
         firstDescription: "As her parents’ firstborn daughter, Li Mei was claimed by the Umgadi, the warrior priestesses who guard Outworld’s royal family.",
@@ -217,6 +229,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: 'BARAKA',
         img: BARAKA,
+        index: 13,
         purpose: 'PRESERVATION',
         essence: 'Defender of the Tarkatans',
         firstDescription: "Baraka was once a respected Outworld merchant. But that life ended in an instant when he contracted the dreaded Tarkat plague.",
@@ -226,6 +239,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: 'TANYA',
         img: TANYA,
+        index: 14,
         purpose: 'PROTECTION',
         essence: 'Guardian of Outworld’s Royal Family',
         firstDescription: "Chosen as an infant from Outworld’s first-born daughters, Tanya was raised by the Umgadi’s priestesses. She’s never known her birth family.",
@@ -235,6 +249,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: 'GERAS',
         img: GERAS,
+        index: 15,
         purpose: 'SERVICE',
         essence: 'Sentinel of the Hourglass',
         firstDescription: "Reconstructed by Liu Kang at the dawn of his New Era, Geras remains eternal and unkillable. He retains the memories of all the innumerable timelines he has watched pass and fade.",
@@ -244,6 +259,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: 'REPTILE',
         img: REPTILE,
+        index: 16,
         purpose: 'FREEDOM',
         essence: 'Zaterran Slave',
         firstDescription: "Reptile is Zaterran, one of the reptiloid race which lives on Outworld’s fringes.",
@@ -253,6 +269,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: 'HAVIK',
         img: HAVIK,
+        index: 17,
         purpose: 'LIBERATION',
         essence: 'Rebellious Anarchist',
         firstDescription: "A citizen of the realm of Seido, Havik is sworn to take down its oppressive regime and free his people. There, order is prized above all else. Lawbreaking is met with strict punishment. Its citizens live in strictly regulated castes.",
@@ -262,6 +279,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: 'ASHRAH',
         img: ASHRAH,
+        index: 18,
         purpose: 'ABSOLUTION',
         essence: 'Repentant Netherralm Demon',
         firstDescription: "As a demon, all Ashrah knew was pain and violence. She assumed all beings, in all realms, lived as she did.",
@@ -271,6 +289,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: 'SINDEL',
         img: SINDEL,
+        index: 19,
         purpose: 'STABILITY',
         essence: 'Empress of Outworld',
         firstDescription: "When Sindel ascended to Outworld's throne, she worried that she was ill-prepared. Adding to her stress: her impending arranged marriage to Jerrod, an Outworld noble. Forced into it to placate a rebellious region, Sindel could only pray that he was worthy.",
@@ -280,6 +299,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: 'GENERAL SHAO',
         img: GENERAL,
+        index: 20,
         purpose: 'DOMINANCE',
         essence: 'Supreme Commander of Outworld’s Army',
         firstDescription: "Born into a proud military family, Shao was expected to become a soldier. But he was a sickly child who, though brilliant and eager, had an infirm body.",
@@ -289,6 +309,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: 'NITARA',
         img: NITARA,
+        index: 21,
         purpose: 'DELIVERANCE',
         essence: 'Heroine of Vaeternus',
         firstDescription: "Nitara’s race of vampires hails from the dark and desolate realm of Vaeternus. To survive, they evolved the ability to feed on the blood of other creatures.",
@@ -298,6 +319,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: 'SHANG TSUNG',
         img: SHANGTSUNG,
+        index: 22,
         purpose: 'INFLUENCE',
         essence: 'Scheming Sorcerer',
         firstDescription: "Shang Tsung grew up in Outworld’s backwaters. Too lazy for hard labor and too shifty for honest work, he eked out a living selling quack cures and fake magic. Though his wares were useless, Shang Tsung’s easy charm always closed the deal.",
@@ -306,6 +328,7 @@ export const FIGHTERS: FighterType[] = [
     {
         name: "REIKO",
         img: REIKO,
+        index: 23,
         purpose: 'FEALTY',
         essence: 'General Shao’s Loyal Lieutenant',
         firstDescription: "Reiko was a boy when he and his family were captured during the Kafallah War. Though his family died, Reiko fought and survived.",

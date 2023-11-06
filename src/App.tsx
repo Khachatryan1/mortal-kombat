@@ -20,7 +20,7 @@ function App() {
     return (
         <div className='app'>
             {
-                showFighterModal && fighter ? <FighterModal fighter={fighter}/> : 
+                showFighterModal && fighter ? <FighterModal currentFighter={fighter}/> : 
                 <>
                     <Header/>
                         <Routes>

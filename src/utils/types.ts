@@ -30,6 +30,7 @@ export type MainNavProps = {
 
 export type FighterType = {
     name: string
+    index: number
     img: string
     purpose: string
     essence: string
@@ -80,5 +81,5 @@ export type PostProps = {
 }
 
 export type FighterModalProps = {
-    fighter: FighterType | null
+    currentFighter: FighterType | null | undefined
 }
