@@ -29,6 +29,7 @@ export const Roster = () => {
     const showFighter = (fighter: FighterType) => {
         setFighter(fighter)
         setShowFighterModal(true)
+        document.body.style.overflow = 'hidden'
     }
     
     return (
@@ -82,6 +83,9 @@ export const Roster = () => {
                         </button>
                     </div>
                 </FireFrame>
-        </div>
+            {
+                showFighterModal && fighter && <FighterModal currentFighter={fighter}/>
+            }
+        </div>  
     )
 }

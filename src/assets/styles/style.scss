@@ -2623,95 +2623,95 @@ a {
         @include modal-overlay;
 
         .cookie-modal-container {
-        max-width: 576px;
-        max-height: 300px;
-        position: absolute;
-        bottom: 380px;
-        left: calc(50% - 288px);
-        background-color: white;
-        border-radius: 5px;
-        z-index: 1000;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        
-        .cookie-modal-header {
-            width: 576px;
-            max-height: 59px;
-            border-bottom: 1px solid #696969;
+            max-width: 576px;
+            max-height: 300px;
+            position: absolute;
+            bottom: 380px;
+            left: calc(50% - 288px);
+            background-color: white;
+            border-radius: 5px;
+            z-index: 1000;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
-            align-items: center;
+            
+            .cookie-modal-header {
+                width: 576px;
+                max-height: 59px;
+                border-bottom: 1px solid #696969;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
 
-            .cookie-modal-image-container {
-                width: 38px;
-                height: 40px;
-                margin: 10px 0 10px 70px;
+                .cookie-modal-image-container {
+                    width: 38px;
+                    height: 40px;
+                    margin: 10px 0 10px 70px;
 
-                img {
-                    width: 100%;
-                    height: 100%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
-            }
 
-            .cookie-modal-close {
-                font-size: 35px;
-                margin-right: 10px;
-                border-radius: 50%;
-                padding: 5px;
-                opacity: 0.8;
-
-                &:hover {
-                    cursor: pointer;
-                    opacity: 0.6;
-                }
-            }
-        }
-
-        .cookie-modal-main {
-            overflow-y: scroll;
-
-            p {
-                font-size: 14px;
-                font-family: roboto;
-                color: #696969;
-                line-height: 25px;
-                font-weight: 700;
-                margin: 60px 0 80px 30px;
-            }
-        }
-
-        .cookie-modal-footer {
-            width: 576px;
-            height: 73px;
-            border-top: 1px solid #696969;
-            text-align: right;
-
-            button {
-                width: 98px;
-                height: 37px;
-                background-color: #004EB4;
-                color: white;
-                outline: none;
-                border: 1px solid transparent;
-                border-radius: 5px;
-                font-size: 11px;
-                font-weight: bold;
-                letter-spacing: 1px;
-                margin-right: 18px;
-                margin-top: 18px;
-
-                &:hover {
-                    cursor: pointer;
+                .cookie-modal-close {
+                    font-size: 35px;
+                    margin-right: 10px;
+                    border-radius: 50%;
+                    padding: 5px;
                     opacity: 0.8;
-                }
 
-                &:active {
-                    border-color: black;
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 0.6;
+                    }
+                }
+            }
+
+            .cookie-modal-main {
+                overflow-y: scroll;
+
+                p {
+                    font-size: 14px;
+                    font-family: roboto;
+                    color: #696969;
+                    line-height: 25px;
+                    font-weight: 700;
+                    margin: 60px 0 80px 30px;
+                }
+            }
+
+            .cookie-modal-footer {
+                width: 576px;
+                height: 73px;
+                border-top: 1px solid #696969;
+                text-align: right;
+
+                button {
+                    width: 98px;
+                    height: 37px;
+                    background-color: #004EB4;
+                    color: white;
+                    outline: none;
+                    border: 1px solid transparent;
+                    border-radius: 5px;
+                    font-size: 11px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    margin-right: 18px;
+                    margin-top: 18px;
+
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 0.8;
+                    }
+
+                    &:active {
+                        border-color: black;
+                    }
                 }
             }
         }
-    }
     }
 
     .language-modal-overlay {
@@ -2813,217 +2813,226 @@ a {
         .close {
             animation: closeModalContainer 0.3s forwards;
         }
-
-       
     }    
 
-    .fighter-modal-container {
-        width: 100vw;
-        max-height: 100vh;
-        position: relative;
-        animation: shrinkModalContainer 0.1s forwards;
-        overflow: hidden;
+    .fighter-modal-overlay {
+        @include modal-overlay();
 
-        .fighter-detail-container {
+        .fighter-modal-container {
+            width: 100%;
             height: 100%;
-            font-family: roboto;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            margin-right: -100px;
-            color: #223e6b;
-            backdrop-filter: blur(10px);
-            background: linear-gradient(180deg,rgba(176,191,215,.7) 0%,white 100%);
-
-            .bg-smoke {
-                // width: 100%;
-                width: 100%;
-                position: absolute;
-                z-index: -1;
-                transform: translate(-50%,-50%);
-                top: 290px;
-                left: 940px;
-            }
-
-            .fighter-detail-img-container {
-                width: 470px;
-                height: 470px;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-
-            .fighter-description-container {
-                width: 705px;
-                margin-top: 100px;
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                margin-left: -70px;
-
-                h2 {
-                    font-size: 60px;
-                    font-weight: 900;
-                }
-
-                h3 {
-                    font-weight: 900;
-                    margin-top: -10px;
-                    font-size: 21px
-                }
-
-                h4 {
-                    letter-spacing: 8px;
-                    color: #3868b6;
-                    font-weight: 600;
-                    font-size: 15px;
-                }
-
-                p {
-                    margin-top: -10px;
-                    line-height: 25px;
-                    // font-weight: 700;
-                }
-            }
-
-        }
-
-        .fighter-line-container {
-            height: 225px;
-            position: relative;
-            padding: 5px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            transform: skew(-9deg);
-
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            animation: shrinkModalContainer 0.1s forwards;
+            overflow: hidden;
+            background-size: cover;
+            backdrop-filter: blur(4px);
             
-
-            .button {
-                position: absolute;
-                font-size: 30px;
-                transform: skew(13deg);
-                top: 90px;
-                border: none;
-                z-index: 1;
-                background: transparent;
-                color: #223E6B;
-                cursor: pointer;
-                
-                &:disabled {
-                    opacity: 0.6;
-                    cursor: not-allowed;
-                }
-
-                &.right-button {
-                    right: 10px;
-                }
-
-                &.left-button {
-                    left: 10px;
-                }
-            }
-            
-            .tick-top {
-                width: 180px;
-                height: 15px;
-                
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-
-            .tick_bottom {
-                width: 180px;
-                height: 15px;
-                transform: rotate(180deg);
-                
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-
-            .fighter-swipe-container {
-                position: absolute;
-                top: 0;
-                left: 0;
+            .fighter-detail-container {
+                height: 100%;
+                font-family: roboto;
+                position: relative;
+                z-index: 6;
                 display: flex;
-                gap: 10px;
-                transition: margin-left 0.5s ease;
-
-
-                .fighter-container {
-                    width: 130px;
-                    height: 163px;
-                    border: 2px solid white;
-                    border-radius: 5px;
-                    transform: skew(-10deg);
-                    position: relative;
-                    top: 30px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    overflow: hidden;
-                    opacity: .8;
-                    transition: opacity 0.5s ease;
-
-                    &.current-fighter {
-                        opacity: 1;
-                        border: 1px solid #223E6B;
-
-                        .fighter-name {
-                            background-color: #2652a5;
-                        }
-                    }
+                justify-content: center;
+                margin-right: -100px;
+                color: #223e6b;
+                background: linear-gradient(180deg,rgba(176,191,215,.7) 0%,white 100%);
     
-                   
+                .bg-smoke {
+                    width: 100%;
+                    position: absolute;
+                    z-index: -1;
+                    transform: translate(-50%,-50%);
+                    top: 290px;
+                    left: 940px;
+                }
+    
+                .fighter-detail-img-container {
+                    width: 470px;
+                    height: 470px;
+    
                     img {
-                        display: block;
                         width: 100%;
                         height: 100%;
-                        transform: scale3d(.5,.5,1) skew(24deg);
-                        scale: 6.2;
-                        margin-top: 286px;
-                        margin-left: 123px;
                     }
-                
-                    .fighter-name {
-                        clip-path: polygon(76% 34%, 95% 59%, 75% 81%, 21% 81%, 0% 60%, 23% 34%);
-                        background-color: #373737;
-                        color: white;
-                        font-size: 8px;
-                        text-align: center;
-                        line-height: 44px;
-                        padding: 3px 30px;
-                        height: 44px;
-                        width: auto;
-                        position: absolute;
-                        z-index: 2;
-                        bottom: -6px;
-                        transform: skew(15deg);
+                }
+    
+                .fighter-description-container {
+                    width: 705px;
+                    margin-top: 100px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    margin-left: -70px;
+    
+                    h2 {
+                        font-size: 60px;
+                        font-weight: 900;
+                        position: static;
                     }
-
-                    &:hover {
-                        cursor: pointer;
+    
+                    h3 {
+                        font-weight: 900;
+                        margin-top: -10px;
+                        font-size: 21px
                     }
-
+    
+                    h4 {
+                        letter-spacing: 8px;
+                        color: #3868b6;
+                        font-weight: 600;
+                        font-size: 15px;
+                    }
+    
+                    p {
+                        margin-top: -10px;
+                        line-height: 25px;
+                    }
                 }
             }
-        }
+    
+            .fighter-line-container {
+                height: 225px;
+                width: 100%;
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+                padding: 5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                transform: skew(-9deg);
+                z-index: 6;
+    
+                .button {
+                    position: absolute;
+                    font-size: 30px;
+                    transform: skew(13deg);
+                    top: 90px;
+                    border: none;
+                    z-index: 10;
+                    background: transparent;
+                    color: #223E6B;
+                    cursor: pointer;
+                    
+                    &:disabled {
+                        opacity: 0.6;
+                        cursor: not-allowed;
+                    }
+    
+                    &.right-button {
+                        right: 10px;
+                    }
+    
+                    &.left-button {
+                        left: 10px;
+                    }
+                }
+                
+                .tick-top {
+                    width: 180px;
+                    height: 15px;
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+    
+                .tick_bottom {
+                    width: 180px;
+                    height: 15px;
+                    transform: rotate(180deg);
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+    
+                .fighter-swipe-container {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 6;
+                    display: flex;
+                    gap: 10px;
+                    transition: margin-left 0.5s ease;
+    
+                    .fighter-container {
+                        width: 130px;
+                        height: 163px;
+                        border: 2px solid white;
+                        border-radius: 5px;
+                        transform: skew(-10deg);
+                        position: relative;
+                        z-index: 6;
+                        top: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+                        opacity: .8;
+                        transition: opacity 0.5s ease;
+    
+                        &.current-fighter {
+                            opacity: 1;
+                            border: 1px solid #223E6B;
+    
+                            .fighter-name {
+                                background-color: #2652a5;
+                            }
+                        }
         
+                       
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            transform: scale3d(.5,.5,1) skew(24deg);
+                            scale: 6.2;
+                            margin-top: 286px;
+                            margin-left: 123px;
+                        }
+                    
+                        .fighter-name {
+                            clip-path: polygon(76% 34%, 95% 59%, 75% 81%, 21% 81%, 0% 60%, 23% 34%);
+                            background-color: #373737;
+                            color: white;
+                            font-size: 8px;
+                            text-align: center;
+                            line-height: 44px;
+                            padding: 3px 30px;
+                            height: 44px;
+                            width: auto;
+                            position: absolute;
+                            z-index: 2;
+                            bottom: -6px;
+                            transform: skew(15deg);
+                        }
+    
+                        &:hover {
+                            cursor: pointer;
+                        }
+    
+                    }
+                }
+            }
+            
+            
+        }
+
         .modal-close-icon {
             color: #223e6b;
             font-size: 40px;
-            // margin: -15px 10px 0 0;
             position: absolute;
             right: 34px;
             top: 7px;
-            z-index: 1;
+            z-index: 16;
             height: 56px;
             width: 56px;
             border-radius: 50%;
@@ -3044,9 +3053,13 @@ a {
                 padding: 0;
             }
         }
-    }
 
-    .close {
-        animation: closeModalContainer 0.1s forwards;
+        &.close {
+            animation: closeModalContainer 0.1s forwards;
+        }
     }
+    
+    // .close {
+        
+    // }
 }

@@ -10,32 +10,22 @@ import { Media } from './pages/media';
 import { Esports } from './pages/esports';
 import { Fac } from './pages/faq';
 import { BuyNow } from './pages/buyNow';
-import { FighterModal } from './components/modal windows/fighterModal';
-import { useContext } from 'react';
-import { MKContext } from './utils/context';
 
 function App() {
-    const {showFighterModal, fighter} = useContext(MKContext)
-
     return (
         <div className='app'>
-            {
-                showFighterModal && fighter ? <FighterModal currentFighter={fighter}/> : 
-                <>
-                    <Header/>
-                        <Routes>
-                            <Route path='/' element={<Home/>}/>
-                            <Route path='GAME INFO' element={<GameInfo/>}/>
-                            <Route path='ROSTER' element={<Roster/>}/>
-                            <Route path='MKKOLLECTIVE' element={<MkKollective/>}/>
-                            <Route path='MEDIA' element={<Media/>}/>
-                            <Route path='ESPORTS' element={<Esports/>}/>
-                            <Route path='buy now' element={<BuyNow/>}/>
-                            <Route path='FAQ' element={<Fac/>}/>
-                        </Routes>
-                    <Footer/>
-                </>
-            }
+            <Header/>
+                <Routes>
+                    <Route path='/' element={<Home/>}/>
+                    <Route path='GAME INFO' element={<GameInfo/>}/>
+                    <Route path='ROSTER' element={<Roster/>}/>
+                    <Route path='MKKOLLECTIVE' element={<MkKollective/>}/>
+                    <Route path='MEDIA' element={<Media/>}/>
+                    <Route path='ESPORTS' element={<Esports/>}/>
+                    <Route path='buy now' element={<BuyNow/>}/>
+                    <Route path='FAQ' element={<Fac/>}/>
+                </Routes>
+            <Footer/>
         </div>
     );
 }
