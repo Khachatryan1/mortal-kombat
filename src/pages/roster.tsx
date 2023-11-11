@@ -5,11 +5,11 @@ import { FIGHTERS } from "../utils/data"
 import { useContext, useState, useEffect } from "react"
 import { MKContext } from "../utils/context"
 import { FighterType } from "../utils/types"
-import ReactPlayer from "react-player"
 import { FireFrame } from "../components/fireFrame"
 import mk1Logo from '../assets/images/different/sigil.webp'
 import logo from '../assets/images/different/mk1-logo-tm.webp'
 import { FighterModal } from "../components/modal windows/fighterModal"
+import { CustomVideo } from "../components/customVideo"
 
 
 export const Roster = () => {
@@ -62,9 +62,8 @@ export const Roster = () => {
                             <div className="fighter-name">
                                 <p>{fighter.name}</p>
                             </div>
-                            {
-                                activeFighter === fighter.name && <ReactPlayer className="roster-smoke" url={rosterSmoke} autoPlay playing loop muted
-                                preload='auto' playsInline width='100%' height='130px'/>
+                            {            
+                                activeFighter === fighter.name &&  <CustomVideo className="roster-smoke" videoUrl={rosterSmoke} videoHeight="130px"/>
                             }
                         </div>
                     ))

@@ -1,9 +1,8 @@
-import ReactPlayer from "react-player"
 import { MainNav } from "../components/mainNav"
 import mk1Logo from '../assets/images/different/sigil.webp'
 import logo from '../assets/images/different/mk1-logo-tm.webp'
 import mkLogo from '../assets/images/different/mk1-logo-tm.webp'
-import { useContext, useEffect, useState } from "react"
+import { useContext, useState } from "react"
 import { MKContext } from "../utils/context"
 import fireDown from '../assets/videos/fire-line-bot.mp4'
 import { AMBASSADORS } from "../utils/data"
@@ -14,6 +13,8 @@ import { Ambassador } from "../components/ambassador"
 import { Post } from "../components/post"
 import React from "react"
 import { FireFrame } from "../components/fireFrame"
+import { CustomVideo } from "../components/customVideo"
+import videoUrl from '../assets/videos/hero.mp4'
 
 
 
@@ -34,7 +35,7 @@ export const MkKollective = () => {
 
     const mainAmbassador: AmbassadorType = AMBASSADORS.find((ambassador) => ambassador.name === 'Miriam Hoffmann') as AmbassadorType
     const posts: AmbassadorType[] = AMBASSADORS.filter((ambassador) => ambassador.postLink && ambassador.name !== mainAmbassador.name)
-    const videoUrl = 'https://cdn-mk1.mortalkombat.com/home/hero.mp4'
+           
 
 
     return (
@@ -53,19 +54,17 @@ export const MkKollective = () => {
                 <p><strong>IT’S IN OUR BLOOD </strong>to celebrate the passion and creativity from the Mortal Kombat community as we continue to support the dedicated and innovative artists and creators. The Kollective is led by our talented MK Ambassadors, who inspire the entire MK community to share what this iconic brand means to you.</p>
                 <h3>Join the MK Kommunity by sharing your creations through social using #MKKollective.</h3>
             </div>
-            <ReactPlayer className="bg-video" url={videoUrl} autoPlay playing loop muted
-                preload='auto' playsInline width='100%' height='100%'/>  
+            <CustomVideo className="bg-video" videoUrl={videoUrl} videoHeight="100%"/> 
             <div className="fire-line-container">
-                <ReactPlayer className="fire-line" url={fireDown} autoPlay playing loop muted
-                    preload='auto' playsInline width='100%' height='118px'/>
+                <CustomVideo className="fire-line" videoUrl={fireDown} videoHeight="118px"/>
             </div>
             <div className="kollective-main-container">
                 <div className="kollective-ambassadors-container">
                     <Post ambassador={mainAmbassador} className='main-post-container'/>
-                    {
-                        AMBASSADORS.map((ambassador) => {
+                    { 
+                        AMBASSADORS.map((ambassador, index) => {
                             return (
-                                <React.Fragment key={ambassador.imgLink}>
+                                <React.Fragment key={index}>
                                     <Ambassador
                                             ambassador={ambassador}
                                             handleCardClick={handleCardClick}
@@ -83,7 +82,7 @@ export const MkKollective = () => {
                     <h2>OTHER FEATURED POSTS</h2>
                     <div className="posts-container">
                         {
-                            posts.map((ambassador) => <React.Fragment key={ambassador.behanceLink}>
+                            posts.map((ambassador, index) => <React.Fragment key={index}>
                                     <Post ambassador={ambassador} className="kollective-post"/>
                                 </React.Fragment>)
                         }

@@ -1,7 +1,6 @@
 import mkLogo from '../assets/images/different/mk1-logo-tm.webp'
 import mk1Logo from '../assets/images/different/sigil.webp'
 import { MainNav } from '../components/mainNav'
-import ReactPlayer from 'react-player'
 import { LiaPlaySolid } from 'react-icons/lia'
 import { useContext, useEffect } from 'react'
 import { MKContext } from '../utils/context'
@@ -11,17 +10,15 @@ import kameoScreen2 from '../assets/images/different/kameo-screen-02-t.jpg'
 import kameoScreen3 from '../assets/images/different/kameo-screen-03-t.jpg'
 import kameoScreen4 from '../assets/images/different/kameo-screen-04-t.jpg'
 import { FireFrame } from '../components/fireFrame'
+import { CustomVideo } from '../components/customVideo'
+import kombatPack from '../assets/videos/kombat-pack.mp4'
+import fireTop from '../assets/videos/fire-line-bot.mp4'
+import fireBottom from '../assets/videos/fire-line-top.mp4'
 
 export const GameInfo = () => {
     const {showVideoModal, setShowVideoModal, goHome, handlePurchase} = useContext(MKContext)
     
-    const fireTop = 'https://cdn-mk1.mortalkombat.com/static/fire-line-bot-loop.mp4'
-    const fireBottom = 'https://cdn-mk1.mortalkombat.com/static/fire-line-top-loop.mp4'
-
-    const KombatPack = 'https://cdn-mk1.mortalkombat.com/media/kombat-pack.mp4'
-
     const images = [kameoScreen1, kameoScreen2, kameoScreen3, kameoScreen4]
-    
 
     useEffect(() => {
         let currentImageIndex = 0;
@@ -68,8 +65,7 @@ export const GameInfo = () => {
                     </div>
                     <div className="game-info-video-container">
                             <div className="game-info-video">
-                                <ReactPlayer url={KombatPack} autoPlay playing loop muted
-                                    preload='auto' playsInline width='100%' height='100%'/>
+                                <CustomVideo videoUrl={kombatPack} videoHeight='100%'/>
                             </div>
                     </div>
                     <LiaPlaySolid onClick={handleVideoModal} className="play-icon"/>
@@ -78,8 +74,7 @@ export const GameInfo = () => {
                     showVideoModal && <VideoModal url='https://www.youtube.com/watch?v=eT-3vhCl6N4'/>
                 }
             </div>
-            <ReactPlayer className='game-info-fire-top' url={fireTop} autoPlay playing loop muted
-                preload='auto' playsInline width='100%' height='130px'/>
+            <CustomVideo  className='game-info-fire-top' videoUrl={fireTop} videoHeight='130px'/>
             <div className='game-info-fire-block-container'>
                 <div className='game-info-fire-block-content'>
                     <div className='game-info-text-content'>
@@ -93,8 +88,7 @@ export const GameInfo = () => {
                 </div>
                 
             </div>
-            <ReactPlayer className='game-info-fire-bottom' url={fireBottom} autoPlay playing loop muted
-                preload='auto' playsInline width='100%' height='130px'/>
+            <CustomVideo  className='game-info-fire-bottom' videoUrl={fireBottom} videoHeight='130px'/>
             <div className='story-block-container'>
                 <div className='story-block-content'>
                     <h2>IMMERSIVE STORY CAMPAIGN</h2>

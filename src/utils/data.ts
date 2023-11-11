@@ -635,3 +635,17 @@ export const AMBASSADORS: AmbassadorType[] = [
         tiktokLink: "https://www.tiktok.com/@royalburrowsdice",
     }
 ]
+
+export const PLATFORMS = {
+    playstation: 'PlayStation®5',
+    xbox: 'Xbox Series X|S',
+    nintendo: 'Nintendo Switch',
+    pc: 'pc'
+}
+
+export const SHOPS = {
+    playstation: 'PlayStation Store',
+    gameStop: 'GameStop',
+    target: 'Target',
+    
+}

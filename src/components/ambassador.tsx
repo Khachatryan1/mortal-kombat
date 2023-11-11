@@ -2,8 +2,8 @@ import { AmbassadorProps, AmbassadorType } from "../utils/types"
 import { AiFillYoutube, AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai"
 import { BiLogoTiktok } from "react-icons/bi"
 import {BsFacebook, BsBehance} from "react-icons/bs"
-import ReactPlayer from "react-player"
 import fireSquare from '../assets/videos/fire-square.mp4'
+import { CustomVideo } from "./customVideo"
 
 export const Ambassador = ({ambassador, handleCardClick, isActive}: AmbassadorProps) => {
 
@@ -16,8 +16,7 @@ export const Ambassador = ({ambassador, handleCardClick, isActive}: AmbassadorPr
                             </div>
                             <p className="front-name">{ambassador.name}</p>
                             <div className="shadow"></div>
-                            <ReactPlayer className="fire-square" url={fireSquare} autoPlay playing loop muted
-                                preload='auto' playsInline width='100%' height='100%'/>
+                            <CustomVideo className="fire-square" videoUrl={fireSquare} videoHeight="100%"/>
                         </div>
                         : 
                         <div className="back">
