@@ -1,16 +1,15 @@
-import { TfiClose } from "react-icons/tfi"
-import { FighterModalProps, FighterType } from "../../utils/types"
-import { useContext, useEffect, useState } from "react"
+import { useContext, useState } from "react"
 import { MKContext } from "../../utils/context"
-import bgSmoke from '../../assets/images/different/smoke-center.webp'
 import { FIGHTERS } from "../../utils/data"
-import tick from '../../assets/images/different/tick.svg'
+import { FighterModalProps, FighterType } from "../../utils/types"
+import { TfiClose } from "react-icons/tfi"
 import { LiaAngleLeftSolid, LiaAngleRightSolid } from "react-icons/lia"
 
-
+import bgSmoke from '../../assets/images/different/smoke-center.webp'
+import tick from '../../assets/images/different/tick.svg'
 
 export const FighterModal = ({currentFighter}: FighterModalProps) => {
-    const {setShowFighterModal, showFighterModal, setFighter} = useContext(MKContext)
+    const {setShowFighterModal, setFighter} = useContext(MKContext)
     const [containerWidth, setContainerWidth] = useState<number | null>(currentFighter ? 830 - currentFighter.index * 139 : 700)
 
     const handleFighterModal = () => {
@@ -21,7 +20,6 @@ export const FighterModal = ({currentFighter}: FighterModalProps) => {
             setShowFighterModal(false)
             document.body.style.overflow = 'auto'
         }, 500)
-
     }
 
     const changeFighter = (fighter: FighterType) => {
@@ -32,19 +30,18 @@ export const FighterModal = ({currentFighter}: FighterModalProps) => {
     }
 
     const movePreviousFighter = () => {
-        const previousIndex = currentFighter?.index !== undefined ? currentFighter.index - 1 : -1;
+        const previousIndex = currentFighter?.index !== undefined ? currentFighter.index - 1 : -1
         const previousFighter = FIGHTERS.find((fighter) => fighter.index === previousIndex) as FighterType
         
         setFighter(previousFighter)
         
         if (currentFighter && containerWidth) {
-            setContainerWidth(containerWidth + 139);
+            setContainerWidth(containerWidth + 139)
         }
-        
     }
 
     const moveNextFighter = () => {
-        const nextIndex = currentFighter?.index !== undefined ? currentFighter.index + 1 : -1;
+        const nextIndex = currentFighter?.index !== undefined ? currentFighter.index + 1 : -1
         const nextFighter = FIGHTERS.find((fighter) => fighter.index === nextIndex) as FighterType
         
         setFighter(nextFighter)
@@ -105,7 +102,6 @@ export const FighterModal = ({currentFighter}: FighterModalProps) => {
                             className="button right-button"><LiaAngleRightSolid/></button>
                 </div>
             </div>
-        </div>
-        
+        </div>  
     )
 }

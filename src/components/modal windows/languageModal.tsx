@@ -1,7 +1,7 @@
 import { useContext } from 'react'
+import { MKContext } from '../../utils/context'
 import {AMERICA, EUROPE, ASIA, MIDDLE_EAST_AFRICA} from '../../utils/data'
 import { TfiClose } from "react-icons/tfi"
-import { MKContext } from '../../utils/context'
 
 
 export const LanguageModal = () => {
@@ -49,6 +49,5 @@ export const LanguageModal = () => {
                     {printLangList(MIDDLE_EAST_AFRICA, 'MIDDLE EAST & AFRICA')}
             </div>
         </div>
-        
     )
 }

@@ -1,9 +1,9 @@
-import ReactPlayer from "react-player"
-import { IoClose } from "react-icons/io5"
-import {FaSearchPlus, FaSearchMinus} from 'react-icons/fa'
-import { MKContext } from "../../utils/context"
 import { useContext, useState } from "react"
+import { MKContext } from "../../utils/context"
 import { VideoModalProps } from "../../utils/types"
+import { IoClose } from "react-icons/io5"
+import { FaSearchPlus, FaSearchMinus } from 'react-icons/fa'
+import ReactPlayer from "react-player"
 
 export const VideoModal = ({url}: VideoModalProps) => {
     const {setShowVideoModal} = useContext(MKContext)

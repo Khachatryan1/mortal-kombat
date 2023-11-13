@@ -1,15 +1,15 @@
 import { memo, useContext } from "react"
+import { MKContext } from "../utils/context"
+import { QUESTIONS } from "../utils/data"
 import { FireFrame } from "../components/fireFrame"
 import { MainNav } from "../components/mainNav"
-import { MKContext } from "../utils/context"
+
 import mkLogo from '../assets/images/different/logo-blue.svg'
 import mk1Logo from '../assets/images/different/sigil.webp'
 import logo from '../assets/images/different/mk1-logo-tm.webp'
-import { QUESTIONS } from "../utils/data"
 
 export const Fac = memo(() => {
     const {goHome, handlePurchase} = useContext(MKContext)
-
 
     return (
         <div className="faq-container">

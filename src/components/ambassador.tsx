@@ -1,9 +1,9 @@
-import { AmbassadorProps, AmbassadorType } from "../utils/types"
+import { AmbassadorProps } from "../utils/types"
+import { CustomVideo } from "./customVideo"
 import { AiFillYoutube, AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai"
 import { BiLogoTiktok } from "react-icons/bi"
 import {BsFacebook, BsBehance} from "react-icons/bs"
 import fireSquare from '../assets/videos/fire-square.mp4'
-import { CustomVideo } from "./customVideo"
 
 export const Ambassador = ({ambassador, handleCardClick, isActive}: AmbassadorProps) => {
 

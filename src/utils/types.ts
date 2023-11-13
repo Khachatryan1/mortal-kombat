@@ -89,10 +89,3 @@ export type PostProps = {
 export type FighterModalProps = {
     currentFighter: FighterType | null | undefined
 }
-
-export type EditionType = {
-    edition: 'STANDARD EDITION' | 'PREMIUM EDITION' | 'KOLLECTOR’S EDITION'
-    platform: 'PlayStation®5' | 'Xbox Series X|S' | 'Nintendo Switch' | 'pc'
-    store: 'PlayStation Store' | 'GameStop' | 'Target' | 'Walmart' | 'Xbox Store' | 'Nintendo Store' | 'Steam' | 'Epic Games Store'
-}
-

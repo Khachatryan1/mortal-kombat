@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700;900&family=Roboto:wght@400;700;900&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
@@ -520,7 +519,6 @@ a {
                 }
             }
 
-
             .video-close {
                 font-size: 35px;
 
@@ -529,12 +527,9 @@ a {
                     color: white;
                 }
             }
-
-            
         }
     }
 }
-
 
 .app {
     min-height: 100vh;
@@ -576,7 +571,6 @@ a {
             border-left: 1px solid rgba(61,147,255,.18);
             padding: 13px 10px 0 10px;
             margin: 0 -15px 13px 0;
-            
 
             .header-nav-support {
                 row-gap: 10px;
@@ -602,7 +596,6 @@ a {
             border-right: 1px solid rgba(61,147,255,.18);
             padding: 13px 10px 10px 10px;
         }
-
     }
 
     .main-container {
@@ -714,7 +707,6 @@ a {
 
             .fire-block-content-right {
                 width: 430px;
-                
                 display: block;
 
                 img {
@@ -723,8 +715,6 @@ a {
                 }
             }   
         }
-
-        
 
         .home-kombat-pack {
             position: relative;
@@ -745,7 +735,6 @@ a {
                 color: white;
                 text-align-last: left;
                 
-
                 .titles {
                     font-weight: 700;
 
@@ -844,7 +833,6 @@ a {
                 position: sticky;
                
                 ul {
-
                    li {
                         background-color: rgba(255, 255, 255, .3);
 
@@ -858,7 +846,6 @@ a {
                         }
                     } 
                 }
-                
             }
         }
         
@@ -938,6 +925,7 @@ a {
                     
                         &:hover {
                             clip-path: polygon(0% 50%, calc(11% - 2px) 0%, calc(89% + 2px) 0%, 100% 50%, calc(89% + 2px) 100%, calc(11% - 2px) 100%);
+                            
                             span {
                                 transform: scale(1.1);
                                 text-shadow: 0 0 2px #96b9fc, 0 0 4px #96b9fc;
@@ -1053,6 +1041,7 @@ a {
 
                     &:hover {
                         clip-path: polygon(0% 50%, calc(11% - 2px) 0%, calc(89% + 2px) 0%, 100% 50%, calc(89% + 2px) 100%, calc(11% - 2px) 100%);
+                        
                         span {
                             transform: scale(1.1);
                             text-shadow: 0 0 2px #96b9fc, 0 0 4px #96b9fc;
@@ -1581,8 +1570,6 @@ a {
                 }
             }
 
-            
-
             .kollective-nav-buy-button {
                 @include button-style();
                 padding: 9px 18px;
@@ -1633,14 +1620,12 @@ a {
             overflow: hidden;
             bottom: -25px;
 
-
             .fire-line {
                 position: relative;
                 z-index: 10;
                 background: linear-gradient(180deg,rgb(0,0,0) 60%,rgba(0,0,0,0) 100%);
                 mix-blend-mode: screen; 
             }
-            
         }
 
         .kollective-header-content {
@@ -1668,7 +1653,6 @@ a {
                 font-size: 16px;
                 font-family: roboto;
             }
-            
         }
 
         .kollective-main-container {
@@ -1795,7 +1779,6 @@ a {
 
                         p {
                             position: absolute;
-                            // color: white;
                             bottom: 15px;
                             right: 15px;
                             transform: rotateY(180deg);
@@ -1859,11 +1842,9 @@ a {
 
                         h2 {
                             bottom: -26px;
-                           
                         }
 
                         .visit-post-container {
-                    
                             a {
                                 width: 100%;
                                 height: 100%;
@@ -1884,18 +1865,15 @@ a {
                                 }
                             }
                         }
-
                     }
                 }
             }
-
         }
 
         .fire-block-container {
             .buy-now-bottom {
                 @include buy-now-bottom();
                 position: relative;
-                // top: -140px;
             }
         }
     }
@@ -1932,7 +1910,6 @@ a {
 
             .media-main-nav {
                 @include main-nav();
-                // background-color: rgba(255, 255, 255, .25);
                 position: static;
                 margin-left: -250px;
 
@@ -1962,6 +1939,7 @@ a {
 
                 &:hover {
                     clip-path: polygon(0% 50%, calc(11% - 2px) 0%, calc(89% + 2px) 0%, 100% 50%, calc(89% + 2px) 100%, calc(11% - 2px) 100%);
+                    
                     span {
                         transform: scale(1.1);
                         text-shadow: 0 0 2px #96b9fc, 0 0 4px #96b9fc;
@@ -2000,7 +1978,6 @@ a {
                 gap: 35px;
                 width: 90%;
                 margin: 0 auto;
-                        
 
                 .video-container {
                     width: calc(33% - 20px);
@@ -2118,12 +2095,12 @@ a {
 
             .sports-main-nav {
                 @include main-nav();
-                // background-color: rgba(255, 255, 255, .25);
                 position: static;
                 margin-left: -250px;
 
                 li:nth-child(5) {
                     background-color: white;
+                   
                     a {
                         color: #223e6b;
                     }
@@ -2131,7 +2108,6 @@ a {
                     &:hover {
                         background-color: white;
                     }
-                    
                 }
 
                 ul {
@@ -2164,6 +2140,7 @@ a {
 
                 &:hover {
                     clip-path: polygon(0% 50%, calc(11% - 2px) 0%, calc(89% + 2px) 0%, 100% 50%, calc(89% + 2px) 100%, calc(11% - 2px) 100%);
+                    
                     span {
                         transform: scale(1.1);
                         text-shadow: 0 0 2px #96b9fc, 0 0 4px #96b9fc;
@@ -2213,7 +2190,6 @@ a {
                     position: absolute;
                     top: 15px;
                     left: 185px;
-                    // text-align: center;
                     color: white;
                 }
             }
@@ -2357,7 +2333,6 @@ a {
 
             .faq-main-nav {
                 @include main-nav();
-                // background-color: rgba(255, 255, 255, .25);
                 position: static;
                 margin-left: -250px;
 
@@ -2387,6 +2362,7 @@ a {
 
                 &:hover {
                     clip-path: polygon(0% 50%, calc(11% - 2px) 0%, calc(89% + 2px) 0%, 100% 50%, calc(89% + 2px) 100%, calc(11% - 2px) 100%);
+                    
                     span {
                         transform: scale(1.1);
                         text-shadow: 0 0 2px #96b9fc, 0 0 4px #96b9fc;
@@ -2412,7 +2388,6 @@ a {
             font-family: roboto;
             margin-top: 120px;
             margin-bottom: 350px;
-
 
             h1 {
                 text-align: center;
@@ -2538,8 +2513,6 @@ a {
                     }
                 }
 
-                
-
                 .rating {
                     width: 300px;
                     height: 120px;
@@ -2615,8 +2588,6 @@ a {
                 }
             }
         }
-        
-         
     }
 
     .cookie-modal-overlay {
@@ -2782,7 +2753,6 @@ a {
                         font-size: 18px;
                         width: calc(50% - 5px);
                         display: flex;
-                        
 
                         p {
                             padding: 5px;
@@ -2988,7 +2958,6 @@ a {
                             }
                         }
         
-                       
                         img {
                             display: block;
                             width: 100%;
@@ -3018,12 +2987,9 @@ a {
                         &:hover {
                             cursor: pointer;
                         }
-    
                     }
                 }
             }
-            
-            
         }
 
         .modal-close-icon {

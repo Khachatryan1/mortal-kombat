@@ -1,28 +1,23 @@
+import React, { useContext, useState } from "react"
+import { MKContext } from "../utils/context"
+import { AMBASSADORS } from "../utils/data"
+import { AmbassadorType } from "../utils/types"
 import { MainNav } from "../components/mainNav"
+import { Ambassador } from "../components/ambassador"
+import { Post } from "../components/post"
+import { FireFrame } from "../components/fireFrame"
+import { CustomVideo } from "../components/customVideo"
+
 import mk1Logo from '../assets/images/different/sigil.webp'
 import logo from '../assets/images/different/mk1-logo-tm.webp'
 import mkLogo from '../assets/images/different/mk1-logo-tm.webp'
-import { useContext, useState } from "react"
-import { MKContext } from "../utils/context"
 import fireDown from '../assets/videos/fire-line-bot.mp4'
-import { AMBASSADORS } from "../utils/data"
-import { NavLink } from "react-router-dom"
-import { Footer } from "../components/footer"
-import { AmbassadorType } from "../utils/types"
-import { Ambassador } from "../components/ambassador"
-import { Post } from "../components/post"
-import React from "react"
-import { FireFrame } from "../components/fireFrame"
-import { CustomVideo } from "../components/customVideo"
 import videoUrl from '../assets/videos/hero.mp4'
-
-
 
 export const MkKollective = () => {
     const {goHome, handlePurchase} = useContext(MKContext)
-    const [activeCard, setActiveCard] = useState('');
+    const [activeCard, setActiveCard] = useState('')
 
-    
     const handleCardClick = (imgLink: string) => {
         if (activeCard === imgLink) {
             setActiveCard('')

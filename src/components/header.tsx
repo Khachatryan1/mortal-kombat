@@ -1,23 +1,24 @@
-import logo from '../assets/images/different/wb-logo.svg'
+import { memo, useContext, useEffect } from 'react'
+import { MKContext } from '../utils/context'
+import { NavLink, useLocation } from 'react-router-dom'
 import { TbWorld } from "react-icons/tb"
 import { AiFillBug, AiFillYoutube, AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai"
 import { HiOutlineSupport } from "react-icons/hi"
 import { BiLogoTiktok } from "react-icons/bi"
 import { BsTwitch, BsDiscord } from "react-icons/bs"
-import { NavLink, useLocation } from 'react-router-dom'
-import { memo, useContext, useEffect } from 'react'
-import { MKContext } from '../utils/context'
+
+import logo from '../assets/images/different/wb-logo.svg'
 
 export const Header = memo(() => {
     const {setShowLanguageModal, language, headerRef} = useContext(MKContext)
     const location = useLocation()
 
     const transparentPaths = ['/', '/GAME%20INFO', '/MKKOLLECTIVE'];
-    const headerClassName = transparentPaths.includes(location.pathname) ? 'transparent-header' : 'blue-header';
+    const headerClassName = transparentPaths.includes(location.pathname) ? 'transparent-header' : 'blue-header'
     
     useEffect(() => {
         document.title = getTitleFromPath(location.pathname)
-    }, [location]);
+    }, [location])
 
     const getTitleFromPath = (location: string) => {
         switch (location) {

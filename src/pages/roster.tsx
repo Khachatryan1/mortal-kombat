@@ -1,22 +1,23 @@
-import { MainNav } from "../components/mainNav"
-import mkLogo from '../assets/images/different/logo-blue.svg'
-import rosterSmoke from '../assets/videos/roster-smoke.mp4'
-import { FIGHTERS } from "../utils/data"
-import { useContext, useState, useEffect } from "react"
+import { useContext, useState } from "react"
 import { MKContext } from "../utils/context"
 import { FighterType } from "../utils/types"
+import { FIGHTERS } from "../utils/data"
+import { MainNav } from "../components/mainNav"
 import { FireFrame } from "../components/fireFrame"
-import mk1Logo from '../assets/images/different/sigil.webp'
-import logo from '../assets/images/different/mk1-logo-tm.webp'
 import { FighterModal } from "../components/modal windows/fighterModal"
 import { CustomVideo } from "../components/customVideo"
 
+import mkLogo from '../assets/images/different/logo-blue.svg'
+import rosterSmoke from '../assets/videos/roster-smoke.mp4'
+import mk1Logo from '../assets/images/different/sigil.webp'
+import logo from '../assets/images/different/mk1-logo-tm.webp'
+
 
 export const Roster = () => {
-    const {goHome, handlePurchase, showFighterModal, setShowFighterModal, fighter, setFighter} = useContext(MKContext)
-    const [activeFighter, setActiveFighter] = useState<string | null>(null);
-
-    
+    const {goHome, handlePurchase, showFighterModal,
+           setShowFighterModal, fighter, setFighter} = useContext(MKContext)
+           
+    const [activeFighter, setActiveFighter] = useState<string | null>(null)
 
     const handleMouseOver = (fighter: FighterType) => {
         setActiveFighter(fighter.name)

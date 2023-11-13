@@ -1,7 +1,7 @@
-import { LiaPlaySolid } from "react-icons/lia"
-import { VideoRenderProps, VideoType } from "../utils/types"
 import { useContext } from "react"
 import { MKContext } from "../utils/context"
+import { LiaPlaySolid } from "react-icons/lia"
+import { VideoRenderProps, VideoType } from "../utils/types"
 
 export const VideoRender = ({list}: VideoRenderProps) => {
     const {setVideoLink, setShowVideoModal} = useContext(MKContext)
@@ -10,7 +10,6 @@ export const VideoRender = ({list}: VideoRenderProps) => {
         setShowVideoModal(true)
         setVideoLink(video.videoUrl)
     }
-
 
     return (
         <>

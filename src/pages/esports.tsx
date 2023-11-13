@@ -1,10 +1,11 @@
+import { useContext } from "react"
+import { MKContext } from "../utils/context"
 import { FireFrame } from "../components/fireFrame"
 import { MainNav } from "../components/mainNav"
+
 import mk1Logo from '../assets/images/different/sigil.webp'
 import logo from '../assets/images/different/mk1-logo-tm.webp'
 import mkLogo from '../assets/images/different/logo-blue.svg'
-import { useContext } from "react"
-import { MKContext } from "../utils/context"
 import competitionLogo from '../assets/images/esports/mk1-pro-kompetition-2023-2024.webp'
 import teileBar from '../assets/images/esports/title-bar.svg'
 import bracketLines from '../assets/images/esports/bracket-lines.svg'
@@ -12,7 +13,6 @@ import shield from '../assets/images/esports/shield.svg'
 import interkontinental from '../assets/images/esports/mk1-interkontinental.webp'
 import latina from '../assets/images/esports/mk1-liga-latina.webp'
 import american from '../assets/images/esports/mk1-north-american-league.webp'
-
 
 export const Esports = () => {
     const {goHome, handlePurchase} = useContext(MKContext)

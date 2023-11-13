@@ -1,5 +1,5 @@
 import { PostProps } from "../utils/types"
-import {RiExternalLinkLine} from 'react-icons/ri'
+import { RiExternalLinkLine } from 'react-icons/ri'
 
 
 export const Post = ({ambassador, className}: PostProps) => {

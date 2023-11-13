@@ -1,7 +1,7 @@
-import { TbWorld } from "react-icons/tb"
-import { CookieModal } from "./modal windows/cookieModal"
 import { memo, useContext } from "react"
 import { MKContext } from "../utils/context"
+import { TbWorld } from "react-icons/tb"
+import { CookieModal } from "./modal windows/cookieModal"
 import { LanguageModal } from "./modal windows/languageModal"
 
 export const Footer = memo(() => {

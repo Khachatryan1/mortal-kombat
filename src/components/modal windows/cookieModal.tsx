@@ -1,8 +1,8 @@
-import { GrFormClose } from "react-icons/gr"
-import WBLogo from '../../assets/images/different/WB_Logo.png'
-import { MKContext } from "../../utils/context"
 import { useContext } from "react"
+import { MKContext } from "../../utils/context"
+import { GrFormClose } from "react-icons/gr"
 
+import WBLogo from '../../assets/images/different/WB_Logo.png'
 
 export const CookieModal = () => {
     const {setShowCookieModal} = useContext(MKContext)

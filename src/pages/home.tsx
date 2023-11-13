@@ -1,133 +1,23 @@
+import { useContext } from "react"
+import { MKContext } from "../utils/context"
+import { FireFrame } from "../components/fireFrame"
+import { VideoModal } from "../components/modal windows/videoModal"
+import { CustomVideo } from "../components/customVideo"
+import { MainNav } from "../components/mainNav"
+import { LiaPlaySolid } from "react-icons/lia"
+
 import logo from '../assets/images/different/mk1-logo-tm.webp'
 import liuKang from '../assets/images/different/liu-kang-wfire.webp'
 import mk1Logo from '../assets/images/different/sigil.webp'
-import { MainNav } from "../components/mainNav";
-import {LiaPlaySolid} from "react-icons/lia"
-import { FireFrame } from "../components/fireFrame";
-import { VideoModal } from "../components/modal windows/videoModal";
-import { useContext, useLayoutEffect } from "react";
-import { MKContext } from "../utils/context";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { CustomVideo } from "../components/customVideo";
 import videoUrl from '../assets/videos/hero.mp4'
 import KombatPack from '../assets/videos/kombat-pack.mp4'
 
 export const Home = () => {
     const {showVideoModal, setShowVideoModal, handlePurchase} = useContext(MKContext)
-    gsap.registerPlugin(ScrollTrigger)
-
-    // useLayoutEffect(() => {
-    //     // const tl = gsap.timeline({
-    //     //     scrollTrigger: {
-    //     //         trigger: '.fire-block-left-img-container',
-    //     //         scrub: true,
-    //     //     }
-    //     // })
-
-    //     // tl.from('.fire-block-left-img-container', {
-    //     //     scale: 0.9,
-    //     //     y: 10
-    //     // }).to('.fire-block-left-img-container', {scale: 1})
-
-
-
-    //     // const tl2 = gsap.timeline({
-    //     //     scrollTrigger: {
-    //     //         trigger: '.fire-block-title',
-    //     //         start: 'top 130%',
-    //     //         scrub: true,
-    //     //     }
-    //     // })
-
-    //     // tl2.from('.fire-block-title', {
-    //     //     scale: 0.5,
-    //     //     opacity: 0
-    //     // }).to('.fire-block-title', {scale: 1, opacity: 1})
-
-
-    //     // const tl3 = gsap.timeline({
-    //     //     scrollTrigger: {
-    //     //         trigger: '.fire-block-text',
-    //     //         start: 'top 115%',
-    //     //         scrub: true,
-    //     //     }
-    //     // })
-
-    //     // tl3.from('.fire-block-text', {
-    //     //     scale: 0.3,
-    //     //     opacity: 0,
-    //     // }).to('.fire-block-text', {scale: 1, opacity: 1})
-
-    //     const tl4 = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: '.titles-h3',
-    //             start: 'top 350px',
-    //             end: 'top 300px',
-    //             scrub: true,
-    //         }
-    //     })
-
-    //     tl4.from('.titles-h3', {
-    //         scale: 0.3,
-    //         opacity: 0,
-    //         // delay: 1,
-    //         // duration: 3,
-    //         // ease: 'power1.ease'
-    //     }).to('.titles-h3', {scale: 1, opacity: 1})
-
-    //     const tl5 = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: '.titles-h2',
-    //             start: 'top 250px',
-    //             end: 'top 200px',
-    //             scrub: true,
-    //         }
-    //     })
-
-    //     tl5.from('.titles-h2', {
-    //         scale: 0.3,
-    //         opacity: 0
-    //     }).to('.titles-h2', {scale: 1, opacity: 1})
-
-    //     const tl6 = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: '.desc',
-    //             start: 'top 300px',
-    //             end: 'top 250px',
-    //             scrub: true,
-    //         }
-    //     })
-
-    //     tl6.from('.desc', {
-    //         scale: 0.3,
-    //         opacity: 0,
-    //         delay: 0.5
-    //     }).to('.desc', {scale: 1, opacity: 1, delay: 0.5})
-
-    //     const tl7 = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: '.kombat-pack-video-container',
-    //             start: 'top 350px',
-    //             end: 'top 400px',
-    //             scrub: true,
-    //         }
-    //     })
-
-    //     tl7.from('.kombat-pack-video-container', {
-    //         scale: 0,
-    //         opacity: 0
-    //     }).to('.kombat-pack-video-container', {scale: 1, opacity: 1})
-    // }, [])
-
-    
-
 
     const handleVideoModal = () => {
         setShowVideoModal(true)
     }
-
-   
 
     return (
         <main className='main-container'>

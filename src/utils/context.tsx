@@ -44,8 +44,6 @@ export const MKContextWrapper = ({ children }: { children: React.ReactNode }) =>
         headerRef.current?.scrollIntoView({ behavior: 'smooth' })
     }
 
-    
-    
     const contextValue: ContextType = {
         showCookieModal,
         setShowCookieModal,

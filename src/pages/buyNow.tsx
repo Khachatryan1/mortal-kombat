@@ -1,10 +1,11 @@
+import { useContext } from "react"
+import { MKContext } from "../utils/context"
 import { MainNav } from "../components/mainNav"
+
 import mkLogo from '../assets/images/different/logo-blue.svg'
 import standardImg from '../assets/images/different/pack-standard.webp'
 import premiumImg from '../assets/images/different/pack-premium.webp'
 import collectorsImg from '../assets/images/different/pack-kollectors.webp'
-import { useContext } from "react"
-import { MKContext } from "../utils/context"
 
 export const BuyNow = () => {
     const {goHome} = useContext(MKContext)

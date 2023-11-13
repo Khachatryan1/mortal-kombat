@@ -1,16 +1,17 @@
-import mkLogo from '../assets/images/different/mk1-logo-tm.webp'
-import mk1Logo from '../assets/images/different/sigil.webp'
-import { MainNav } from '../components/mainNav'
-import { LiaPlaySolid } from 'react-icons/lia'
 import { useContext, useEffect } from 'react'
 import { MKContext } from '../utils/context'
+import { FireFrame } from '../components/fireFrame'
+import { CustomVideo } from '../components/customVideo'
+import { MainNav } from '../components/mainNav'
 import { VideoModal } from '../components/modal windows/videoModal'
+import { LiaPlaySolid } from 'react-icons/lia'
+
+import mkLogo from '../assets/images/different/mk1-logo-tm.webp'
+import mk1Logo from '../assets/images/different/sigil.webp'
 import kameoScreen1 from '../assets/images/different/kameo-screen-01-t.jpg'
 import kameoScreen2 from '../assets/images/different/kameo-screen-02-t.jpg'
 import kameoScreen3 from '../assets/images/different/kameo-screen-03-t.jpg'
 import kameoScreen4 from '../assets/images/different/kameo-screen-04-t.jpg'
-import { FireFrame } from '../components/fireFrame'
-import { CustomVideo } from '../components/customVideo'
 import kombatPack from '../assets/videos/kombat-pack.mp4'
 import fireTop from '../assets/videos/fire-line-bot.mp4'
 import fireBottom from '../assets/videos/fire-line-top.mp4'
@@ -21,8 +22,8 @@ export const GameInfo = () => {
     const images = [kameoScreen1, kameoScreen2, kameoScreen3, kameoScreen4]
 
     useEffect(() => {
-        let currentImageIndex = 0;
-        const imageElement = document.getElementById('kameoImage') as HTMLImageElement;
+        let currentImageIndex = 0
+        const imageElement = document.getElementById('kameoImage') as HTMLImageElement
     
         const changeImage = () => {
             currentImageIndex = (currentImageIndex + 1) % images.length
@@ -34,9 +35,6 @@ export const GameInfo = () => {
     
         return () => clearTimeout(timerId)
     }, [])
-    
-
-    
 
     const handleVideoModal = () => {
         setShowVideoModal(true)

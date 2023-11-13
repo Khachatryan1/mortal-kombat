@@ -1,8 +1,8 @@
-import './assets/styles/style.scss'
+import './assets/styles/style.scss';
 import { Header } from './components/header';
 import { Home } from './pages/home';
-import { Footer } from './components/footer'
-import {Routes, Route} from 'react-router'
+import { Footer } from './components/footer';
+import {Routes, Route} from 'react-router';
 import { GameInfo } from './pages/gameInfo';
 import { Roster } from './pages/roster';
 import { MkKollective } from './pages/mkkollective';

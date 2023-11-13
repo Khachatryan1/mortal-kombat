@@ -1,6 +1,6 @@
+import { CustomVideo } from './customVideo'
 import fireTop from '../assets/videos/fire-line-top.mp4'
 import fireDown from '../assets/videos/fire-line-bot.mp4'
-import { CustomVideo } from './customVideo';
 
 export const FireFrame = ({children}: {children: React.ReactNode}) => {
     return (

@@ -1,6 +1,6 @@
+import { memo } from "react"
 import { NavLink } from "react-router-dom"
 import { MainNavProps } from "../utils/types"
-import { memo } from "react"
 
 export const MainNav = memo(({className}: MainNavProps) => {
     const navItems: string[] = ['GAME INFO', 'ROSTER', '#MKKOLLECTIVE', 'MEDIA', 'ESPORTS', 'FAQ']
